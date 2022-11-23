@@ -1,0 +1,40 @@
+/* reset --------------------------------- */
+.navmenu, .navmenu ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+/* --------------------------------------- */
+.navmenu li, .navmenu ul a {position:relative;}
+.navmenu > li {float:left;}
+.navmenu > li.floatr {float:right;}
+.navmenu li > a {display:block;}
+/* --------------------------------------- */
+.navmenu ul {
+	position:absolute;
+	display:none;
+	width:155px;
+	z-index: 99999;
+}
+.navmenu ul ul {
+	top:0;
+	left:155px;
+	z-index: 99999;
+}
+.navmenu > li.floatr > ul {right:0;}
+.navmenu > li.floatr > ul ul {left:-155px;}
+.navmenu li:hover > ul {display:block;}
+/* mega navmenu ----------------------------- */
+.navmenu .cols1, .navmenu .cols2, .navmenu .cols3, .navmenu .cols4, .navmenu .cols5 {
+	position:absolute;
+	display:none;
+	overflow:auto;
+}
+.navmenu .cols1, .navmenu .col1 {width:160px;}
+.navmenu .cols2, .navmenu .col2 {width:320px;}
+.navmenu .cols3, .navmenu .col3 {width:480px;}
+.navmenu .cols4, .navmenu .col4 {width:640px;}
+.navmenu .cols5, .navmenu .col5 {width:800px;}
+.navmenu > li.floatr > div {right:0;}
+.navmenu > li:hover > div {display:block;}
+.navmenu .col1, .navmenu .col2, .navmenu .col3, .navmenu .col4, .navmenu .col5 {float:left;}

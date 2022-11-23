@@ -1,0 +1,245 @@
+<?php
+
+require_once '../libs/mpdf/mpdf.php';
+require_once '../libs/QuickBooks.php';
+require_once "init.php";
+
+require 'CheckPrintFDPlugin/Helper.php';
+
+$memberId = (int) $_SESSION['member_id'];
+
+// create file
+$fileName = "Check-Recipts-v2-".date('Y-m-d his').".html";
+$fullPath = ROOT_PATH."uploads/Invoices/Checks/".$fileName;
+
+$daffny->DB->transaction('start');
+
+$InvoiceData = GetInvoiceData($daffny);
+
+// iterating UI starts
+for($i=0;$i<count($InvoiceData);$i++){
+    $CarrierID = $InvoiceData[$i]['CarrierID'];
+    $account = new Account($daffny->DB);
+    $account->load($CarrierID);
+
+    if ($account->print_check == 1) {
+        $printName = ucfirst($account->print_name);
+        $company_name = $printName;
+        $address1 = $account->print_address1;
+        $address2 = $account->print_address2;
+        $city = $account->print_city;
+        $state = $account->print_state;
+        $zip_code = $account->print_zip_code;
+    } else {
+        $printName = ucfirst($account->company_name);
+        $company_name = $printName;
+        $address1 = $account->address1;
+        $address2 = $account->address2;
+        $city = $account->city;
+        $state = $account->state;
+        $zip_code = $account->zip_code;
+    }
+
+    $DispatchIds = $InvoiceData[$i]['DispatchIds'];
+    $TotalAmount = $InvoiceData[$i]['TotalAmount'];
+    $AmountWords = $InvoiceData[$i]['AmountWords'];
+
+    if($i != 0){
+        $stabilityHeight = "65px";
+    } else {
+        $stabilityHeight = "55px";
+    }
+
+    $content .= '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">';
+    $content .= '<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Untitled Document</title>
+        <style>
+        *{
+            box-sizing:border-box;
+        }
+        .container {
+            width: 670px;
+            margin: auto;
+            padding: 3px;
+        }
+        .row {
+            clear: left;
+            width: 100%;
+            display:inline-block;
+        }
+        input {
+            border: none;
+            height: 20px;
+            width: 100%;
+        }
+        </style>
+    </head>';
+
+    $content .= '<body onload="window.print()">';
+    $content .= '<div class="container" style="height:1000px;">';
+
+    $content .= '<div class="row" style="margin-top:'.$stabilityHeight.';">
+        <div style="float:right; padding-right:2px;">'.date('m/d/Y').'</div>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:25px;">
+        <div style="float:left; padding-left:35px;width:530px;">
+            '.$company_name.'
+        </div>
+        <div style="float:right;padding-right:30px;">
+        &nbsp;&nbsp;&nbsp;'.number_format((float) $TotalAmount, 2, ".", ",").'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:10px;">
+        <div style="float:left;width:475px; padding-left:10px;">
+        '.$AmountWords.'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:20px;">
+        <div style="float:left; padding-left:50px;width:310px;">
+        '.$company_name.'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="">
+        <div style="float:left; padding-left:50px;width:310px;">
+        '.$address1.' '.$address2.'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="">
+        <div style="float:left; padding-left:50px;width:310px;">
+        '.$city.', '.$state.' '.$zip_code.'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:10px;">
+        <div style="float:left; padding-left:30px;width:260px;">
+        Dispatch ID '.$DispatchIds.'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:100px;">
+        <div style="float:left; padding-left:5px;width:380px;">
+        '.$company_name.'
+        </div>
+        <div style="float:right; padding-right:5px;width:120px;">
+        '.date('m/d/Y').'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:10px;">
+        <table width="100%" cellpadding="1" cellspacing="1">
+        <tr>
+            <td width="33%">Date</td>
+            <td  width="33%" align="center">Reference</td>
+            <td  width="34%"  align="right">Payment</td>
+        </tr>
+        <tr>
+            <td>'.date('m/d/Y').'</td>
+            <td align="center">#'.$DispatchIds.'</td>
+            <td  align="right">'.number_format((float) $TotalAmount, 2, ".", ",").'</td>
+        </tr>
+        <tr><td colspan="7">&nbsp;</td></tr>
+        </table>
+    </div>';
+    
+    $content .= '<div class="row" style="margin-top:100px;"></div>';
+
+    $content .= '<div class="row" style="margin-top:155px;">
+        <div style="float:left; padding-left:5px;width:295px;">
+        '.$company_name.'
+        </div>
+        <div style="float:right; padding-right:5px;width:120px;">
+        '.date('m/d/Y').'
+        </div>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:10px;">
+        <table width="100%" cellpadding="1" cellspacing="1">
+        <tr>
+            <td  width="33%">Date</td>
+            <td  width="33%" align="center">Reference</td>
+    
+            <td  width="34%"  align="right">Payment</td>
+        </tr>
+        <tr>
+            <td>'.date('m/d/Y').'</td>
+    
+            <td align="center">#'.$DispatchIds.'</td>
+    
+            <td align="right">'.number_format((float) $TotalAmount, 2, ".", ",").'</td>
+        </tr>
+        <tr><td colspan="7">&nbsp;</td></tr>
+        </table>
+    </div>';
+
+    $content .= '<div class="row" style="margin-top:110px;"></div>';
+
+    $content .= '</div>';
+    $content .= '</body>';
+
+    $inp = $daffny->DB->selectRow('id,value', 'members_type_value', "WHERE member_id='".$_SESSION['member']['id']."' and type='QBPRINT'");
+    if (!empty($inp)) {
+        $individualAmount = explode(",",$InvoiceData[$i]['Amounts']);
+        $amountIndex = 1;
+
+        for($l=0;$l<count($InvoiceData[$i]['InvoiceID']);$l++){
+            $sql = "SELECT CheckID FROM Invoices WHERE ID = ".$InvoiceData[$i]['InvoiceID'][$l];
+            $checkID = $daffny->DB->query($sql);
+            $checkID = mysqli_fetch_assoc($checkID)['CheckID'];
+
+            $sql = "UPDATE app_payments_check SET check_number = '".$inp['value']."' WHERE id = ".$checkID;
+            $res = $daffny->DB->query($sql);
+
+            $check_number = 0;
+            $PaymentID = 0;
+            while($r = mysqli_fetch_assoc($res)){
+                $check_number = $r['check_number'];
+                $PaymentID = $r['PaymentID'];
+            }
+            $sql = "UPDATE app_payments SET `check` = '".$check_number."' WHERE id = ".$PaymentID;
+            $res = $daffny->DB->query($sql);
+
+            $entity = new Entity($daffny->DB);
+            $entity->load($InvoiceData[$i]['EntityID'][$l]);
+
+            if ($entity->status == Entity::STATUS_ISSUES && $entity->isPaidOff() ) {
+                try{
+                    $entity->setStatus(Entity::STATUS_DELIVERED);
+                } catch(Exception $e){
+                    $daffny->DB->transaction('rollback');
+                }
+            }
+
+            $sql = "INSERT INTO app_notes (entity_id,sender_id,`type`,`text`,`status`,system_admin)";
+            $NoteMessage = "<green>Carrier has been paid amount $ ".number_format((float) $individualAmount[$amountIndex], 2, ".", ",")." by Company Check #". $inp['value'];
+            $sql .= "VALUES( '".$InvoiceData[$i]['EntityID'][$l]."', '".$memberId."','3', '".$NoteMessage."', '1', '1')";
+            $res = $daffny->DB->query($sql);
+            $amountIndex++;
+
+            if ($entity->status == Entity::STATUS_ISSUES && $entity->isPaidOff() ) {
+                try{
+                    $entity->updateHeaderTable();
+                } catch(Exception $e){
+                    $daffny->DB->transaction('rollback');   
+                }
+            }
+        }
+
+        // Updating Start Check Number after printing
+        $res = $daffny->DB->update('members_type_value', array('value' => ($inp['value'] + 1)), "id = '".$inp['id']."' ");
+    }
+}
+// iterating UI ends
+
+$daffny->DB->transaction('commit');
+
+file_put_contents($fullPath,$content);
+$out = array('URL' => $fileName,'success' => true);
+
+echo json_encode($out);
+die;

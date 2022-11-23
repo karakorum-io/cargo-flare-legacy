@@ -1,0 +1,405 @@
+<?php
+
+/**
+ * Quotes Model
+ *
+ * This is the Model for all the operations related to the Quotes.
+ *
+ * @category	Controller
+ * @author      Chetu
+ * @link	https://www.chetu.com/
+ */
+
+class Quotes extends CI_Model {
+    
+    const REFFERED_BY = "CUSTOMER PORTAL";
+    const REFFERED_ID = 999;
+    const STATUS = 127;
+    const TABLE = 'app_entities';
+    const ENTITY_TYPE = 1;
+    
+    /**
+     * This is default function of the model which loads with all the function
+     * in the model
+     * 
+     * @author          Chetu
+     * @lastUpdateDate  16112017
+     * @return          Nothing
+     */
+    public function __construct(){
+        parent::__construct();{
+            $this->load->helper('url');
+            $this->load->library('form_validation');
+            $this->load->database();
+            $this->load->library('email');
+        }
+    }
+    
+    /**
+     * This is the to insert data in the database related to Quotes
+     * 
+     * @param Array $data Quotes data array
+     * @author          Chetu
+     * @lastUpdateDate  29112017
+     * @return          inserted id
+     */
+    public function createQuote($data){
+        
+        $this->db->insert('app_entities',$data);
+        $num = $this->db->insert_id();
+        if($num){
+            return $num;
+        }else{
+            return FALSE;
+        }
+    }
+    
+    /**
+     * This is the to insert data in the database related to Vehicle in quotes
+     * 
+     * @param Array $vehicles Vehicles data array
+     * @author          Chetu
+     * @lastUpdateDate  29112017
+     * @return          inserted id
+     */
+    public function createVehicle($vehicles){
+        
+        $insertedVehicles = array();
+        
+        for($i=0;$i< count($vehicles);$i++){
+            
+            $vehicleData = array(
+                'entity_id' => $vehicles[$i]['entity_id'],
+                'year'=> $vehicles[$i]['year'],
+                'make'=>$vehicles[$i]['make'],
+                'model'=>$vehicles[$i]['model'],
+                'type'=>$vehicles[$i]['type'],
+                'inop'=>$vehicles[$i]['inop']                
+            );
+            $this->db->insert('app_vehicles',$vehicleData);
+            $num = $this->db->insert_id();
+            $insertedVehicles[$i]= $num;
+        }
+        
+        if(count($insertedVehicles)>0){
+            return $insertedVehicles;
+        }else{
+            return FALSE;
+        }
+    }
+    
+    /**
+     * This is the to insert data in the database related to Origin in quotes
+     * 
+     * @param Array $data Origin data array
+     * @author          Chetu
+     * @lastUpdateDate  29112017
+     * @return          inserted id
+     */
+    public function createOrigin($data){
+        $this->db->insert('app_locations',$data);
+        $num = $this->db->insert_id();
+        if($num){
+            return $num;
+        }else{
+            return FALSE;
+        }
+    }
+    
+    /**
+     * This is the to insert data in the database related to destination in quotes
+     * 
+     * @param Array $data Destination data array
+     * @author          Chetu
+     * @lastUpdateDate  29112017
+     * @return          inserted id
+     */
+    public function createDestination($data){
+        $this->db->insert('app_locations',$data);
+        $num = $this->db->insert_id();
+        if($num){
+            return $num;
+        }else{
+            return FALSE;
+        }
+    }
+    
+    /**
+     * This is the to insert data in the database related to destination in quotes
+     * 
+     * @param Array $data Shipper data array
+     * @author          Chetu
+     * @lastUpdateDate  29112017
+     * @return          inserted id
+     */
+    public function createShipper($data){
+        
+        $this->db->insert('app_shippers',$data);
+        $num = $this->db->insert_id();
+        if($num){
+            return $num;
+        }else{
+            return FALSE;
+        }
+    }
+    
+    /**
+     * This is the to update data in the database related to entity table
+     * 
+     * @param Array $data Entity data array
+     * @param Int $id Entity Id
+     * @author          Chetu
+     * @lastUpdateDate  30112017
+     * @return          true/ false
+     */
+    public function updateEntity($data,$id){
+        
+        $updateData= "";
+        foreach($data as $key => $value){
+           $updateData .= $key." = '".$value."',";
+        }
+        $updateData = substr($updateData, 0, strlen($updateData)-1); 
+        
+        $result = $this->db->query("UPDATE `app_entities` SET {$updateData}  WHERE `id` = {$id}");
+        return $result;
+    }
+    
+    /**
+     * This is the to copy entities in app_order_header
+     * 
+     * @param Int $entityId entity id
+     * @author          Chetu
+     * @lastUpdateDate  30112017
+     * @return          true/ false
+     */
+    public function copyInOrderHeader($entityId){
+       
+        /* calling stored procedure */
+        $result = $this->db->query("CALL insert_app_order_header('{$entityId}')");
+        return $result;
+       
+    }
+    
+    /**
+     * This is the to insert followup data for quotes
+     * 
+     * @param Array $data followup data
+     * @author          Chetu
+     * @lastUpdateDate  30112017
+     * @return          true/ false
+     */
+    public function craeteFollowUp($data){
+        $this->db->insert('app_followups',$data);
+        $num = $this->db->insert_id();
+        if($num){
+            return $num;
+        }else{
+            return FALSE;
+        }        
+    }
+    
+    /**
+     * This is the to get first date follow up
+     * 
+     * @param Int $shipperOwnerId shippers parent/ owner id
+     * @author          Chetu
+     * @lastUpdateDate  30112017
+     * @return          first date efollow up
+     */
+    public function getFirstFollowUp($shipperOwnerId){
+        
+        $query = $this->db->query("SELECT `first_quote_followup` FROM `app_defaultsettings` WHERE `owner_id`='{$shipperOwnerId}'");
+        $result = $query->result();
+        return $result[0]->first_quote_followup;
+        
+    }
+    
+    /**
+     * This is the to insert notes in app_notes
+     * 
+     * @param Array $data notes data
+     * @author          Chetu
+     * @lastUpdateDate  30112017
+     * @return          true / false
+     */
+    public function createNotes($data){
+        
+        $this->db->insert('app_notes',$data);
+        $num = $this->db->insert_id();
+        if($num){
+            return $num;
+        }else{
+            return FALSE;
+        } 
+        
+    }
+    
+    /**
+     * This is the to create unique hash for quotes
+     * 
+     * @author          Chetu
+     * @lastUpdateDate  30112017
+     * @return          true / false
+     */
+    public function findFreeHash() {
+       do {
+            $hash = md5(mt_rand() . time());
+            //echo "SELECT COUNT(*) FROM ". self::TABLE." WHERE `hash` LIKE '".$hash."'<br>";
+            $query = $this->db->query("SELECT COUNT(*) as `count` FROM `app_entities` WHERE `hash` LIKE '{$hash}'");
+            $result = $query->result();            
+        } while ($result[0]->count != 0);
+        
+        return $hash;
+    }
+    
+    /**
+     * function used to pull the quotes listings on the basis of account id and
+     * passed status from app_order_header
+     * 
+     * @param int $userId account id of a shipper
+     * @param int $status Status of an order
+     * @autho Chetu Inc.
+     * @return Array Order listings
+     */
+    public function getQuotesList($userId, $status) {
+
+        $data = array(
+            'account_id' => $userId,
+            'status' => $status,
+            'type' => self::ENTITY_TYPE
+        );
+
+        $fields = " `status`,`entityid`,`number`,`prefix`,(`NotesCount1`+`NotesCount2`+`NotesCount3`) as `notesCount`,`balance_paid_by`,`esigned`,`vehicleid`,`TotalVehicle`,`Vehicleyear`,`Vehiclemake`,`Vehiclemodel`,`Vehicletype`,`Origincity`,`Originstate`,`Originzip`,`Destinationcity`,`Destinationstate`,`Destinationzip`,`created` ,`avail_pickup_date`,`posted`,`archived`,`load_date`,`load_date_type`,`delivery_date`,`delivery_date_type`,`actual_pickup_date`,`hold_date`,`carrier_pay_stored`,`total_tariff_stored`,(`total_tariff_stored`-`carrier_pay_stored`) as `deposite` ";
+        $query = "SELECT " . $fields . " FROM `app_order_header` WHERE `account_id`= '" . $userId . "' AND `type` = '" . self::ENTITY_TYPE . "' AND `status` = '" . $status . "' ";
+        $query = $this->db->query($query);
+        $result = $query->result_array();
+
+        for ($i = 0; $i < count($result); $i++) {
+            $result[$i]['pickup'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+            $result[$i]['delivery'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+
+            if ($result[$i]['status'] == 4 || $result[$i]['status'] == 1) {
+                if (strtotime($result[$i]['avail_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "1st avil",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['avail_pickup_date']))
+                    );
+                }
+                if (strtotime($result[$i]['posted']) > 0) {
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "Posted",
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['posted']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 3) {
+                if (strtotime($result[$i]['avail_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "1st avail",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['avail_pickup_date']))
+                    );
+                }
+                if ($result[$i]['archived'] != "") {
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "Cancelled",
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['archived']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 7 || $result[$i]['status'] == 9) {
+                if (strtotime($result[$i]['load_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['load_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['load_date_type']] : "";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                }
+
+                if (strtotime($result[$i]['delivery_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['delivery_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['delivery_date_type']] : "";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 5 || $result[$i]['status'] == 6) {
+                if (strtotime($result[$i]['load_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['load_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['load_date_type']] : "";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                }
+
+                if (strtotime($result[$i]['delivery_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['delivery_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['delivery_date_type']] : "";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 8) {
+                if (strtotime($result[$i]['actual_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "Pickup ",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['actual_pickup_date']))
+                    );
+                }
+
+                if (strtotime($result[$i]['delivery_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "" . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['delivery_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['delivery_date_type']] : "";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "" . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 2) {
+                if (strtotime($result[$i]['avail_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "1st avail ",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['avail_pickup_date']))
+                    );
+                }
+
+                if ($result[$i]['hold_date'] != "") {
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "Hold ",
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['hold_date']))
+                    );
+                }
+            } else {
+                $result[$i]['pickup'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+                $result[$i]['delivery'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+            }                        
+        }
+        return $result;
+    }
+}

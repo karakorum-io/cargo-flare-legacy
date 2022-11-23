@@ -1,0 +1,390 @@
+<? include(TPL_PATH . "accounts/accounts/menu_details.php"); 
+
+
+$shipperAccess = 0;
+if($_SESSION['member']['access_shippers']==1 || 
+			   $_SESSION['member']['parent_id']==$_SESSION['member_id'] )
+			{
+				$shipperAccess = 1;
+			}
+
+?>
+
+<div align="right" style="clear:both; padding-bottom:5px; padding-top:5px;">
+
+    <img style="vertical-align:middle;" src="<?= SITE_IN ?>images/icons/back.png" alt="Back" width="16" height="16" /> 
+    <?php
+			if($_SESSION['member']['parent_id']==$_SESSION['member_id'])
+			{
+			  ?>
+              <a href="<?= getLink("accounts") ?>">&nbsp;Back to the list</a>
+              <?php
+		     }else
+			 {
+			?>
+              <a href="<?= getLink("accounts","shippers") ?>">&nbsp;Back to the list</a>
+            <?php	 
+			 }
+            ?>
+	        
+	    
+    
+</div>
+<div style="float:left; width:1200px; padding-right:20px;">
+<div style="float:left; width:500px; padding-right:20px;">
+<table width="100%" cellpadding="1" cellspacing="1">
+<tr>
+  <td >
+    <?= formBoxStart("Account Information") ?>
+    <table cellpadding="0" cellspacing="5" border="0">
+        <tr>
+            <td><strong>Rating:</strong></td>
+            <td>@rating@</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap"><strong>Company Name:</strong></td>
+            <td>@company_name@</td>
+        </tr>
+        <tr>
+            <td><strong>Status:</strong></td>
+            <td>@status_name@</td>
+        </tr>
+        <tr>
+            <td><strong>Type:</strong></td>
+            <td>@type@</td>
+        </tr>
+        <tr>
+            <td><strong>Print on check As:</strong></td>
+            <td>@print_name@</td>
+        </tr>
+        <tr>
+            <td><strong>ICC MC Number:</strong></td>
+            <td>@insurance_iccmcnumber@</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>Hours of operation:</strong></td>
+            <td>@hours_of_operation@</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>Notes:</strong></td>
+            <td>@notes@</td>
+        </tr>
+        <tr>
+            <td valign="top"><strong>Referred By:</strong></td>
+            <td>@referred_by@</td>
+        </tr>
+
+    </table>
+    <?= formBoxEnd() ?>
+  </td>
+  
+ </tr>
+ </table>   
+    <br />
+    <?= formBoxStart($this->accountType." Information") ?>
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td valign="top" width="50%">
+                <table cellpadding="0" cellspacing="5" border="0">
+                    <tr>
+                        <td nowrap="nowrap" valign="top"><strong><?php if($this->isShipper==1){?>First Name<?php }else{?>Contact #1:<?php }?></strong></td>
+                        <td valign="top"><?php if($this->isShipper==1){?>@first_name@<?php }else{?>@contact_name1@<?php }?></td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap" valign="top"><strong><?php if($this->isShipper==1){?>Last Name<?php }else{?>Contact #2:<?php }?></strong></td>
+                        <td valign="top"><?php if($this->isShipper==1){?>@last_name@<?php }else{?>@contact_name2@<?php }?></td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap" valign="top"><strong>Phone 1:</strong></td>
+                        <td valign="top">@phone1@</td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap" valign="top"><strong>Phone 2:</strong></td>
+                        <td valign="top">@phone2@</td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><strong>Cell Phone:</strong></td>
+                        <td valign="top">@cell@</td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><strong>Fax:</strong></td>
+                        <td valign="top">@fax@</td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top" width="50%">
+                <table cellpadding="0" cellspacing="5" border="0">
+                    <tr>
+                        <td valign="top"><strong>Email:</strong></td>
+                        <td valign="top">@email@</td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><strong>Address:</strong></td>
+                        <td valign="top">@address1@ @address2@</td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><strong>City:</strong></td>
+                        <td valign="top">@city@</td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><strong>State:</strong></td>
+                        <td valign="top">@state@@state_other@</td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap" valign="top"><strong>Zip Code:</strong></td>
+                        <td valign="top">@zip_code@</td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><strong>Country:</strong></td>
+                        <td valign="top">@country_name@</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <?= formBoxEnd() ?>
+    <br />
+    <?php //print formBoxStart("Insurance Company Information"); ?>
+    <!--table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td valign="top" width="50%">
+                <table cellpadding="0" cellspacing="5" border="0">
+                    <tr>
+                        <td><strong>Name:</strong></td>
+                        <td>@insurance_companyname@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Address:</strong></td>
+                        <td>@insurance_address@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Company Phone: </strong></td>
+                        <td>@insurance_phone@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Certificate Holder:</strong></td>
+                        <td>@insurance_holder@</td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap"><strong>Additionally Insured:</strong></td>
+                        <td>@insurance_insured@</td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap"><strong>Broker/Carrier Contract:</strong></td>
+                        <td>@insurance_contract@</td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top" width="50%">
+                <table cellpadding="0" cellspacing="5" border="0">
+                    <tr>
+                        <td><strong>Agent Name:</strong></td>
+                        <td>@insurance_agentname@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agent Phone:</strong></td>
+                        <td>@insurance_agentphone@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Policy Number:</strong></td>
+                        <td>@insurance_policynumber@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Liability Amount $:</strong></td>
+                        <td>@insurance_liability_amount@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Insurance Coverage $:</strong></td>
+                        <td>@insurance_coverage@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cargo Deductible $:</strong></td>
+                        <td>@insurance_cargo_deductible@</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expiration Date:</strong></td>
+                        <td>@insurance_expirationdate@</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table-->
+    <?php print formBoxEnd(); ?>
+    <br />
+    <?= backButton(getLink("accounts")) ?>
+</div>
+<?php if($this->isCarrier==1){?>
+<div style="width:600px; float:left; padding-left:10px;">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+            
+            <tr><td colspan="4" align="left"><h3>Orders</h3></td></tr>
+            
+            <tr><td valign='top' colspan="4">
+            
+            <table cellspacing="0" cellpadding="0" width="100%" border="0" class="grid" id="internal_notes_table">
+			<thead>
+			<tr class="grid-head">
+                <td width="20%">Order ID</td>
+				<td width="20%">Dispatch Date</td>
+                <td width="14%">Origin/Destination</td>
+                <td width="14%">Dispatch Link</td>
+                <td width="20%">Amount</td>
+			    
+				<!--td class="grid-head-right">Action</td-->
+			</tr>
+			</thead>
+            </table>
+            
+            <div style="overflow:scroll; height:520px;">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0" class="grid" id="internal_notes_table">
+			<tbody>
+			<?php if (count($this->commissionData) == 0){ ?>
+                <tr class="grid-body">
+                    <td colspan="9" align="center" class="grid-body-left grid-body-right"><i>No records</i></td>
+                </tr>
+			<?php }else{ ?>
+            <?php //print "==".count($this->commissionData);//foreach ($this->entities as $i => $entity) {
+				foreach ($this->commissionData as $i => $entities) {
+             
+             $entity = $entities['entities'];
+			  //print "------".$entities['entity_id'];
+			 $origin = $entity->getOrigin();
+             $destination = $entity->getDestination();
+			
+			//$dispatch_link = "https://www.freightdragon.com/dev/order/dispatchnew/hash/".$entities['hash_link'];
+			// $ds = $entity->getDispatchSheet();
+			 //print "<pre>";
+			 //print_r($ds);
+			// print "------------------------------------------------------</pre>";
+			 //print "<br>===".$ds->order_number;
+			 //$dispatch_link = BASE_PATH . "order/dispatchnew/hash/" . $ds->hash_link;
+			 
+			 
+			 $file = $entities['files'][0];
+			
+			 $fileArr = explode("-",$file['name_original']);
+			 $fileName = substr($fileArr[0],0,-5);
+			 $fileDate = date("Y-m-d",strtotime($file['date_uploaded']));
+			 ?>
+			<tr class="grid-body"> 
+               
+               <td style="white-space:nowrap;" class="grid-body-left" width="14%"><a href="<?= SITE_IN ?>application/orders/show/id/<?= $entity->id ?>"><?= $entity->getNumber() ?></a></td>
+               <td style="text-align: center;" width="25%"><?= $entities['accepted'] ?></td>
+               <td style="text-align: center;" width="25%">
+                  <span class="like-link"
+                      onclick="window.open('<?= $origin->getLink() ?>', '_blank')"><?= $origin->getFormatted() ?></span> / 
+                  <span class="like-link"
+                      onclick="window.open('<?= $destination->getLink() ?>')"><?= $destination->getFormatted() ?></span><br/></td>
+               
+              
+                  <td style="text-align: center;" width="14%">
+                      
+						<a href="<?=getLink("orders", "getdocs", "id", $file['id'])?>" target="_blank"><?=$file['img']?></a>
+                  
+                 
+                  
+                  </td>
+                  <td style="text-align: center;" width="14%">
+                  
+                          <table cellspacing="0" cellpadding="0" border="0" width="100%" class="tariff-grid">
+                            <tr>
+                                <td width="10"><img src="<?= SITE_IN ?>images/icons/dollar.png" alt="Total Tariff"
+                                                    title="Total Tariff" width="16" height="16"/></td>
+                                <td style="white-space: nowrap;"><span class='<?= $Tcolor;?>'><?= $entity->getTotalTariff() ?></span></td>
+                            </tr>
+                            <tr>
+                                <td width="10">
+                                     
+                                    <?php  if ($entities['carrier_company_name']!="" && $entities['carrier_contact_name']!="" ) { ?>
+                                        <span class="viewsample like-link" style="border-bottom: none">
+                                            <img src="<?= SITE_IN ?>images/icons/truck.png" alt="Carrier Pay" title="Carrier Pay" width="16" height="16"/>
+                                        </span>
+                                        <div class="sample-info carrier-info-popup">
+                                            <strong>Company Name: </strong><?= $entities['carrier_company_name'] ?><br/>
+                                            <strong>Contact Name: </strong><?= $entities['carrier_contact_name'] ?><br/>
+                                            <strong>Phone 1: </strong><?= $entities['carrier_phone_1'] ?><br/>
+                                            <strong>Phone 2: </strong><?= $entities['carrier_phone_2'] ?><br/>
+                                            <strong>Fax: </strong><?= $entities['carrier_fax'] ?><br/>
+                                            <strong>Email: </strong><?= $entities['carrier_email'] ?><br/>
+                                            <?php $carrier = $entity->getCarrier();?>
+                                            <?php if ($carrier instanceof Account) { ?>
+                                                <strong>Hours of Operation: </strong><?= $carrier->hours_of_operation ?><br/>
+                                            <?php } ?>
+                                            <strong>Driver Name: </strong><?= $entities['carrier_driver_name'] ?><br/>
+                                            <strong>Driver Phone: </strong><?= $entities['carrier_driver_phone'] ?><br/>
+                                        </div>
+                                    <?php } else { ?>
+                                    <img src="<?= SITE_IN ?>images/icons/truck.png" alt="Carrier Pay" title="Carrier Pay" width="16" height="16"/>
+                                    <?php } ?>
+                                </td>
+                                <td style="white-space: nowrap;"><span class='<?= $Ccolor;?>'><?= $entity->getCarrierPay() ?></span><br/></td>
+                            </tr>
+                            <tr>
+                                <td width="10"><img src="<?= SITE_IN ?>images/icons/person.png" alt="Deposit    "
+                                                    title="Deposit" width="16" height="16"/></td>
+                                <td style="white-space: nowrap;"><span class='<?= $Dcolor;?>'><?= $entity->getTotalDeposit() ?></span></td>
+                          </tr>
+                          <?php /*if($isValue['totalPayValue']>0){?>
+                            <tr>
+                                <td width="10"><img src="<?= SITE_IN ?>images/icons/circle-black.png" alt="Payment Recieved"
+                                                    title="Payment Recieved" width="16" height="16"/></td>
+                                <td style="white-space: nowrap;"><span class='black' title="Payment Recieved"><b><?= ("$ " . number_format((float)$isValue['totalPayValue'], 2, ".", ",")) ?></b></span></td>
+                            </tr>
+                            <?php }*/?>
+                        </table>
+                  </td>
+                  
+               
+              
+			</tr>
+			<?php } 
+			  /*if($totalValue>0){
+			?>
+                <tr class="grid-body"> 
+                   
+                   
+                   <td style="text-align: right;"><b>Total</b></td>
+                   <td style="text-align: center;"><b>$<?= number_format($totalValue, 2, ".", "") ?></b></td>
+                   <td style="text-align: center;"><b>$<?= $depositeValue ?></b></td>
+                   <td style="text-align: center;">&nbsp;</td>
+                   <td style="text-align: center;">&nbsp;</td>
+                   <td style="text-align: center;">&nbsp;</td>
+                   <td style="text-align: center;"><b>$<?= number_format($commission_got_amount, 2, ".", "") ?></b></td>
+                   <td style="text-align: center;">&nbsp;</td>
+                  
+                </tr>
+            
+			<?php 
+			  }*/
+			} ?>
+			</tbody>
+		</table>
+            </div>
+            
+            </td></tr>  
+            <tr><td colspan="4">&nbsp;</td></tr>
+            
+        </table>
+</div>
+<?php }?>
+</div>
+<?php /* ?>
+<div style="float:right; width:450px;">
+    <?= formBoxStart("Recently Created Orders") ?>
+    <table cellpadding="0" cellspacing="5" border="0">
+        <tr>
+            <td>
+                @$this->order_history@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="<?= getLink("accounts", "orderhistory", "id", (int) get_var("id")) ?>">View complete order history</a>
+            </td>
+        </tr>
+    </table>
+    <?= formBoxEnd() ?>
+</div>
+ <?php */ ?>
+<div style="clear:both;">&nbsp;</div>

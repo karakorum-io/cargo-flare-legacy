@@ -1,0 +1,50 @@
+.header {
+    width: 104%;
+    padding: 15px;
+    background: #dfe0e4;
+}
+
+.footer {
+    position: relative;
+    bottom: 0px;
+    padding: 15px;
+    width: 103%;
+    background: #dfe0e4;
+}
+
+.gray-font {
+    color: #333;
+}
+
+.middle-div {
+    padding: 30px;
+}
+
+.action-btn {
+    width: 150px;
+    height: 45px;
+    background: #1b75bb;
+    border-color: #1b75bb;
+}
+
+.vertical-center {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.red-border {
+    border: 1px solid red;
+    color: red;
+}
+
+.max-para-width {
+    width: 40%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .max-para-width {
+        width: 75%;
+    }
+}

@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	font-family: Arial;
+	font-size: 10px;
+	color: #444;
+}
+
+td {
+	vertical-align: top;
+	font-size: 10px;
+}
+
+td.nowrap {
+	white-space: nowrap;
+}
+
+th {
+	background-color: #EEE;
+	font-weight: bold;
+	text-align: center;
+	font-size: 11px;
+}
+
+.dispatch_table td, .dispatch_table th {
+    padding: 0px;
+}
+
+.dispatch_table th {
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    color: #222222;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+
+.dispatch_table td.group {
+    padding: 0px;
+    vertical-align: top;
+}
+
+.vehicles-table {
+    background-color: #2C87B9;
+}
+
+.dispatch_table .vehicles-table th {
+    background-color: #EEEEEE;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 20px;
+}
+
+.dispatch_table .vehicles-table td {
+    background-color: #FFFFFF;
+    text-align: left;
+    padding: 3px 20px;
+}
+
+.fake-th {
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    color: #222222;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #CCCCCC;
+    text-align: center;
+    padding: 3px;
+}
+
+.fake-td {
+    padding: 3px;
+}
+
+
+.table_outer{ 
+   border:1px solid #2C87B9;
+}
+.table_inner { 
+   border:1px solid #2C87B9;
+  padding:4px !important;
+  
+  
+}
+
+.table_inner_less_padding { 
+   border:1px solid #2C87B9;
+   padding:4px !important;
+   
+}
+
+.table_inner_less_padding td{ 
+   border-bottom:1px solid #2C87B9;
+   height:35px;
+}
+
+
+
+.table_inner_less_padding .inner td{ 
+   border-bottom:none;
+  
+}
+
+
+.dis_heading{ 
+  color:#2C87B9; 
+  font-size:18px; 
+  font-weight:bold;
+   
+}
+.dis_heading_small{ 
+  color:#2C87B9; 
+  font-size:13px; 
+  font-weight:bold;
+   
+}
+
+.dis_heading_vsmall{ 
+  color:#2C87B9; 
+  font-size:11px; 
+  font-weight:bold;
+   
+}
+
+.dis_column_text_small{ 
+  font-size:13px; 
+  font-weight:bold;
+  padding-left:2px;
+}
+.dis_column_text{ 
+  font-size:11px; 
+  
+  padding-left:5px;
+}
+.dis_large_red{ 
+  font-size:20px; 
+  font-weight:bold;
+  padding-left:5px;
+  color:#C00;
+}
+
+.dis_large_red_small{ 
+  font-size:16px; 
+  font-weight:bold;
+  padding-left:5px;
+  color:#C00;
+}
+
+.dis_large_black{ 
+  font-size:20px; 
+  font-weight:bold;
+  padding-left:5px;
+  color:#ffffff;
+}
+
+.dispatch_table td, .dispatch_table th {
+    padding: 0;
+}

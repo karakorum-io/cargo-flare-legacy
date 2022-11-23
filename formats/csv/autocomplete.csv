@@ -1,0 +1,11 @@
+type;id;name;base_price;inop_surcharge;encl_surcharge;origin_radius;destination_radius;calculate_price;round_total_to;surcharges_1;surcharges_2;surcharges_3;surcharges_4;surcharges_5;surcharges_6;surcharges_7;surcharges_8;surcharges_9;surcharges_10;surcharges_11;surcharges_12;surcharges_13;surcharges_14;surcharges_15;surcharges_16;surcharges_17;surcharges_18;surcharges_19;surcharges_20;surcharges_21;surcharges_other;surcharges_unknown
+1;1;FL-HI;1500;200;300;20;25;75;1;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230
+2;1;Coral Springs;FL;10,75;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2;1;Fort Pierce;FL;12,5;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+3;1;Ahuimanu;HI;170;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+3;1;Barbers Point Housing;HI;150;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+1;2;FL-NY;2000;20;30;40;50;75;1;10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230
+2;2;Coral Springs;FL;10;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2;2;Boca Raton;FL;0,25;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+3;2;New York;NY;11;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+3;2;Newark;NY;12,85;;;;;;;;;;;;;;;;;;;;;;;;;;;;

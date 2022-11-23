@@ -1,0 +1,458 @@
+
+<?php 
+    if( strpos( $_SERVER['REQUEST_URI'], "dispatchnew" ) !== false ) {
+        $dispatchpopup = "yes";
+    } else {
+        $dispatchpopup = "no";
+    }
+?>
+<div id="notes_container"></div>
+
+
+
+    <div id="notes_add">
+    <div id="notes_add_title"></div>
+    <div id="notes_container_new" style="overflow-y:scroll;  max-height:280px; background-color:#ffffff; margin:5px; padding:5px;font-size:12px;"></div>
+    <br />
+    <p></p>
+    <textarea class="form-box-textarea" name="add_note_text" style="padding-left:3px;font-size:11px;line-height:14px;color:#555;"></textarea>
+    <div style="float:right;">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td style="color:#FFFFFF;">Quick Notes&nbsp;</td>
+                <td>
+                    <select name="quick_notes" id="quick_notes" onchange="addQuickNote();">
+                        <option value="">--Select--</option>
+                        <option value="Document Upload: Release(s) attached.">Document Upload: Release(s) attached.</option>
+                        <option value="Document Upload: Gate Pass(es) attached.">Document Upload: Gate Pass(es) attached.</option>
+                        <option value="Document Upload: Dock Receipt attached.">Document Upload: Dock Receipt attached.</option>
+                        <option value="Document Upload: Photos attached.">Document Upload: Photos attached.</option>
+                        <option value="Phoned: Bad Mobile.">Phoned: Bad Number.</option>
+                        <option value="Phoned: No Voicemail.">Phoned: No Voicemail.</option>
+                        <option value="Phoned: Left Message.">Phoned: Left Message.</option>
+                        <option value="Phoned: No Answer.">Phoned: No Answer.</option>
+                        <option value="Phoned: Spoke to Customer.">Phoned: Spoke to Customer.</option>
+                        <option value="Phoned: Spoke to carrier about pick-up.">Phoned: Spoke to carrier about pick-up.</option>
+                        <option value="Phoned: NSpoke to carrier about drop-off.">Phoned: Spoke to carrier about drop-off.</option>
+                        <option value="Phoned: Customer requested carrier info.">Phoned: Customer requested carrier info.</option>
+                        <option value="Phoned: Customer reported  damage.">Phoned: Customer reported damage.</option>
+                        <option value="Phoned: Customer canceled, late pick-up.">Phoned: Customer canceled, late pick-up.</option>
+                        <option value="Phoned: Customer canceled, no reason given.">Phoned: Customer canceled, no reason given.</option>
+                        <option value="Phoned: Customer canceled, through e-Mail.">Phoned: Customer canceled, through e-Mail.</option>
+                        <option value="Phoned: Customer was happy with the transport.">Phoned: Customer was happy with the transport.</option>
+                        <option value="Phoned: Customer was un-happy with the transport.">Phoned: Customer was un-happy with the transport.</option>
+                        <option value="Phoned: Customer want a refund.">Phoned: Customer want's a refund.</option>
+                        <option value="Phoned: Not Interested.">Phoned: Not Interested.</option>
+                        <option value="Phoned: Do Not Call.">Phoned: Do Not Call.</option>
+                    </select>
+                </td>
+                <td style="color:#FFFFFF;">
+                    <div style="float:left; padding:2px;">
+                        &nbsp;&nbsp;&nbsp;Priority&nbsp;
+                    </div>
+                    <div style="float:left; padding:2px;">
+                        <select name="priority_notes" id="priority_notes">
+                            <option value="0">--Select--</option>
+                            <option value="2">High</option>
+                            <option value="1">Low</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <?= functionButton('Add Note', 'addNote()') ?>
+                </td>
+                <td>
+                    <?= functionButton('Cancel', 'closeAddNotes()') ?>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+<?php
+    if( strpos( $_SERVER['REQUEST_URI'], "create" ) !== false || strpos( $_SERVER['REQUEST_URI'], "dispatchnew" ) !== false || strpos( $_SERVER['REQUEST_URI'], "edit" ) !== false ) {
+        
+?>
+
+<div id="acc_search_dialog" style="">
+    <div id="outerPopup" style="">
+        <div class="tab-panel-container">
+            <ul class="tab-panel dispatchPopup">
+                <li class="tab"  id="tabLabel1" style="background:#dddddd">
+                    <span onclick="openNewTabs(1)" >Accounts</span>
+                </li>
+                <?php
+                    if($_SESSION['member']['parent_id'] != 1){
+                        $hideLeads = "display:none;";
+                    } else {
+                        $hideLeads = "display:block;";
+                    }
+                ?>
+                <li class="tab" id="tabLabel2" style="<?php echo $hideLeads;?>">
+                    <span onclick="openNewTabs(2)" >Leads</span>
+                </li>
+            </ul>
+            <div style="clear:both;"></div>
+        </div>
+
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="form-table">
+                    <tr>
+                            <?php
+                                if( strpos( $_SERVER['REQUEST_URI'], "dispatchnew" ) !== false ) {
+                               ?>
+                        <td width="100%"><input type="text" name="app_search_text" id="acc_search_string" style="width:98%" class="form-box-textfield" autocomplete="off"/></td>
+                                <td><?=functionButton('Search', "accountSearch()")?>
+
+                                <td align="right">&nbsp;<span class="like-link multi-vehicles"><b><img src="/images/icons/info.png" title="Details" alt="Details" width="16" height="16"></b></span>
+                            <?php } else { ?>
+                                <td width="37%"><input type="text" name="app_search_text" id="acc_search_string" style="width:98%" class="form-box-textfield" autocomplete="off"/></td>
+                                <td><?=functionButton('Search', "accountSearch()")?>
+
+                                <td align="right">&nbsp;<span class="like-link multi-vehicles"><b><img src="/images/icons/info.png" title="Details" alt="Details" width="16" height="16"></b></span>
+                            <?php } ?>
+                                   <div class="search_help">
+                                    <?php
+                                     if( strpos( $_SERVER['REQUEST_URI'], "dispatchnew" ) !== false ) {
+                                    ?>
+                                       <p style="text-align: left;">
+                                        Company<br>
+                                        Phone Number 1<br>
+                                        Phone Number 2<br>                                        
+                                        Contact Name1<br>
+                                        Contact Name2
+                                      </p>
+                                     
+                                     <?php } else {
+                                         ?>
+                                      <p style="text-align: left;">
+                                        First Name<br>
+                                        Last Name<br>
+                                        First + Last Name<br>
+                                        Company Name<br>
+                                        Email<br>
+                                        Any Phone Number in Account Profile.<br>
+                                        (Phone 1, Phone 2, Mobile and Fax)<br>
+                                        Address 1<br>
+                                        Address 2<br>
+                                        City<br>
+                                        State<br>
+                                        Zip<br>
+                                        Any Combination of the Address<br>
+                                        Address + City + State + FL, etc...<br>
+                                        Order Id<br>                                 
+                                      </p>
+                                     <?php }?>
+                                   </div>
+                            </td>
+                    </tr>
+
+                    <tr>
+                            <td colspan="3">
+                  <div style="overflow:scroll-y; max-height:280px;">
+                       <script>
+                            function openNewTabs(tabCount){
+                                if(tabCount == 2){
+                                    $("#ul2").show();
+                                    $("#ul1").hide();
+                                    $("#tabLabel2").css("background","#dddddd");
+                                    $("#tabLabel1").css("background","#ffffff");
+                                } else {
+                                    $("#tabLabel1").css("background","#dddddd");
+                                    $("#tabLabel2").css("background","#ffffff");
+                                    $("#ul2").hide();
+                                    $("#ul1").show();
+                                }
+
+                            }
+                            var dispatchedPopupUI = '<?php echo $dispatchpopup;?>';
+                            if(dispatchedPopupUI == 'yes'){
+                                $(".dispatchPopup").html('');
+                            }
+                        </script>
+                      <ul id='ul1' style="display:block;">
+                          <table cellspacing="0" cellpadding="0" border="0" class="grid" width="100%">
+                              <thead class="dispatchPopup">
+                                  <tr class="grid-head">
+                                      <th>Select One</th>
+                                      <th>Assigned To</th>
+                                      <th>Shipper</th>
+                                      <th>Address</th>
+                                      <th>Last Order</th>
+                                      <th>Credit Limits</th>
+                                  </tr>
+                              </thead>
+                              <tbody id="acc_search_result"></tbody>
+                          </table>
+                      </ul>         
+                      <ul id='ul2' style='display:none;'>
+                          <table cellspacing="0" cellpadding="0" border="0" class="grid" width="100%">
+                              <thead>
+                                  <tr class="grid-head">
+                                      <th>Select One</th>
+                                      <th>ID</th>
+                                      <th>Created At</th>
+                                      <th>Shipper</th>
+                                      <th>Shipment Type</th>
+                                      <th>Last Activity Date</th>
+                                  </tr>
+                              </thead>
+                              <tbody id="acc_search_result_leads">
+
+                              </tbody>
+                          </table>
+                      </ul>
+                  </div>  
+
+                            </td>
+                    </tr>
+            </table>
+    </div>
+    <div id="innerPopup" style="display:none;">
+        <div id='shipperinfo' style='padding-left:20px;  padding-top:20px;'></div>
+        <hr>
+        <div style="max-height:400px; overflow-y: auto;">
+            <div style='padding-left:20px; overflow: hidden;'>
+                <table cellspacing="0" cellpadding="0" border="0" class="grid" width="100%">
+                    <thead>
+                        <tr class="grid-head">
+                            <th>Order ID</th>
+                            <th><a id="createdDate" class="order-desc" onclick="getSortingDataCreated();" style="color:#fff;">Created Date</a></th>
+                            <th>Vehicles</th>
+                            <th>Route</th>
+                            <th colspan="2" align="center"><a id="avail_pickup_dateOrderBy" class="order-desc" onclick="getSortingDataDate1();" style="color:#fff;">Dates</a></th>
+                            <th>Transport Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody id='orderInfo'>                    
+                    </tbody>
+                </table>
+                <input type="hidden" id="shipperId">
+                <script>
+                    var orderBy = 2;
+                    var orderByDate1 =2;
+                    function getSortingDataCreated(){
+                        var shipper = $("#shipperId").val();
+                        if(orderBy == 1){
+                            orderBy = 2;
+                            $("#createdDate").addClass('order-desc');
+                            $("#createdDate").removeClass('order-asc');                            
+                        } else {
+                            orderBy = 1;
+                            $("#createdDate").removeClass('order-desc');
+                            $("#createdDate").addClass('order-asc');
+                        } 
+                        
+                        innerPHandler(shipper,1,orderBy);
+                        $("#shipperId").val("");
+                        $("#shipperinfo").html("");
+                        $("#orderInfo").html("");
+                        $("#loadingMeassage").show();
+                    }
+                    function getSortingDataDate1(){
+                        var shipper = $("#shipperId").val();
+                        if(orderByDate1 == 1){
+                            orderByDate1 = 2;
+                            $("#avail_pickup_dateOrderBy").addClass('order-desc');
+                            $("#avail_pickup_dateOrderBy").removeClass('order-asc');                            
+                        } else {
+                            orderByDate1 = 1;
+                            $("#avail_pickup_dateOrderBy").removeClass('order-desc');
+                            $("#avail_pickup_dateOrderBy").addClass('order-asc');
+                        } 
+                        
+                        innerPHandler(shipper,2,orderByDate1);
+                        $("#shipperId").val("");
+                        $("#shipperinfo").html("");
+                        $("#orderInfo").html("");
+                        $("#loadingMeassage").show();
+                    }
+                </script>
+            </div>
+            <div class="loadingMeassage"><center><img src="https://thumbs.gfycat.com/ImpoliteLivelyGenet-size_restricted.gif" height="300"></center></div>
+        </div>
+        <hr>
+        <div>
+            <style>
+                #chetuBack:hover{
+                    color:#f6f6f6 !important;
+                    background:#0073ea !important;
+                }
+            </style>
+            <button id= "chetuBack" class="ui-button-text" onclick="closeInnerPopup()" style="width: 100px; height:25px; color:#0073ea; background: #f6f6f6; border: 1px solid #dddddd; border-radius: 2px; float:right;">Back</button>
+        </div>
+    </div>
+</div>
+<?php
+    }
+?>
+
+
+<div id="acc_search_dialog_new_dispatch">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" class="form-table">
+		<tr>
+			<td width="100%"><input type="text" name="app_search_text_new_dispatch" id="acc_search_string_new_dispatch" style="width:98%" class="form-box-textfield"/></td>
+			<td><?=functionButton('Search', "accountSearchNewDispatch()")?></td>
+			<td>&nbsp;<span class="like-link multi-vehicles"><b>[?]</b></span>
+                               <div class="search_help">
+                               <p> 
+                                 Company<br /> 
+                                 Phone Number1 <br />
+                                 Phone Number2<br /> 
+                                 Contact Name1<br /> 
+                                 Contact Name2<br /> 
+                                 </p>
+                               </div></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<ul id="acc_search_result_new_dispatch"></ul>
+			</td>
+		</tr>
+        <tr id="colorCod" style="display:none;">
+			<td colspan="3">
+				<table width="100%">
+                  <tr><td bgcolor="#F0FF1A" width="10%" ></td> <td>Insurance is about to expire.</td></tr>
+                  <tr><td bgcolor="#FF1A24" width="10%"></td> <td>Insurance expired.</td></tr>
+                </table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div id="acc_entity_dialog" style="display: none">
+    You previously posted this order to Central Dispatch. Would you like to re-post it with updated information?
+</div>
+<div id="acc_entity_dispatch_dialog" style="display: none">
+    <table cellspacing="2" cellpadding="0" border="0">
+         <tr>
+            <td><input type="radio" name="delivery_credit_select" id="delivery_credit_select_r" value="0" checked > <b>Regular</b></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><h3>Speed Pay</h3></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="delivery_credit_select" id="delivery_credit_select_a" value="1" > <b>Option A - Next Day Delivery 5% + $12.00</b></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="delivery_credit_select" id="delivery_credit_select_b" value="2" > <b>Option B - Next Day Delivery 3% + $12.00</b></td>
+        </tr>
+        
+    </table>
+</div>
+
+<div id="acc_entity_dialog_confirm" style="display: none">
+    This order has been posted Successfully.
+</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+								
+		$('#acc_search_string_new_dispatch').keypress(function(e) {
+							  
+			if(e.which == 13) {
+				//alert('You pressed enter!');
+				var textOrder = $("#add_order").val();
+				if(textOrder!="")
+				  accountSearchNewDispatch();
+		
+			
+				return false;
+			}
+	});	
+								
+		$("#acc_entity_dialog").dialog({
+			autoOpen: false,
+			modal: true,
+			width: 400,
+			resizable: false,
+			draggable: true,
+			buttons: [
+				{
+					text: 'Yes',
+					click: function () {
+						$("#post_to_cd").val('1');
+						$("#save_order_form").submit();
+						$(this).dialog('close');
+					}
+				},
+				{
+					text: 'No',
+					click: function () {
+						$("#post_to_cd").val('0');
+						//alert($("#post_to_cd").val());
+						$("#save_order_form").submit();
+						$(this).dialog('close');
+					}
+				}
+			]
+		});
+		$("#acc_entity_dispatch_dialog").dialog({
+			autoOpen: false,
+			modal: true,
+			width: 400,
+			resizable: false,
+			draggable: true,
+			buttons: [
+				{
+					text: 'Accept Terms',
+					click: function () {
+						if($("#delivery_credit_select_r").is(":checked")!='')
+						   $("#delivery_credit").val($("#delivery_credit_select_r").val());
+						else if($("#delivery_credit_select_a").is(":checked")!='')
+						   $("#delivery_credit").val($("#delivery_credit_select_a").val());
+						else if($("#delivery_credit_select_b").is(":checked")!='')
+						   $("#delivery_credit").val($("#delivery_credit_select_b").val());
+						 else
+						    $("#delivery_credit").val(0);
+							
+						// alert($("#delivery_credit").val());
+						$("#save_order_form").submit();
+						$(this).dialog('close');
+					}
+				},
+				{
+					text: 'Cancel',
+					click: function () {
+						//$("#post_to_cd").val('0');
+						
+						//$("#save_order_form").submit();
+						$(this).dialog('close');
+					}
+				}
+			]
+		});
+		
+		$("#acc_entity_dialog_confirm").dialog({
+			autoOpen: false,
+			modal: true,
+			width: 400,
+			resizable: false,
+			draggable: true,
+			buttons: [
+				{
+					text: 'Ok',
+					click: function () {
+						$(this).dialog('close');
+					}
+				}
+			]
+		});                
+	});
+	
+    $(document).ready(function(){
+        $("#acc_search_string").keydown(function (e){
+            if(e.keyCode == 13){
+               accountSearch();
+            }
+        });
+    });    
+	
+</script>
+

@@ -1,0 +1,561 @@
+[11-Sep-2018 22:18:01 UTC] PHP Fatal error:  Call to a member function result_array() on null in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 75
+[12-Sep-2018 21:28:29 UTC] PHP Fatal error:  Call to undefined method Payments::record_payments() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1616
+[13-Sep-2018 22:37:39 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 136
+[13-Sep-2018 22:38:09 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 136
+[13-Sep-2018 22:38:25 UTC] PHP Fatal error:  Call to a member function result_array() on string in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 137
+[17-Sep-2018 19:46:44 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:46:45 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:46:48 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:48:03 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:48:38 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:48:53 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:03 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:04 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:05 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:06 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:07 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:07 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:08 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:09 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:09 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:11 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:16 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:17 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:19 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:19 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:19 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:19 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:19 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:19 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:49:20 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:50:11 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:50:13 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:50:17 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:50:47 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:50:48 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:50:50 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:51:04 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:51:32 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:52:24 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:53:53 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 19:54:08 UTC] PHP Parse error:  syntax error, unexpected 'EQUEST_STATE_START' (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1674
+[17-Sep-2018 20:15:36 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 195
+[17-Sep-2018 20:44:29 UTC] PHP Fatal error:  Call to a member function result() on null in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 210
+[18-Sep-2018 19:53:57 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 173
+[18-Sep-2018 19:54:24 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 173
+[18-Sep-2018 19:54:27 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 173
+[18-Sep-2018 19:55:29 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 173
+[18-Sep-2018 19:55:56 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 173
+[18-Sep-2018 19:56:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Payments.php on line 173
+[18-Sep-2018 20:07:33 UTC] PHP Fatal error:  Call to undefined method Shippers::user_profile() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 436
+[18-Sep-2018 20:07:41 UTC] PHP Fatal error:  Call to undefined method Shippers::user_profile() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 436
+[18-Sep-2018 20:11:12 UTC] PHP Fatal error:  Call to undefined method Shippers::user_profile() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 436
+[18-Sep-2018 20:18:27 UTC] PHP Fatal error:  Call to undefined method Shippers::user_profile() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 437
+[18-Sep-2018 21:13:12 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 481
+[18-Sep-2018 21:13:31 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 481
+[18-Sep-2018 21:13:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 481
+[18-Sep-2018 21:13:45 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 481
+[18-Sep-2018 22:06:30 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 241
+[19-Sep-2018 19:56:32 UTC] PHP Fatal error:  Call to undefined method Payments::CustomerOweAmount() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1873
+[19-Sep-2018 20:41:02 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::result() in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 434
+[19-Sep-2018 20:46:00 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 435
+[19-Sep-2018 20:46:01 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 435
+[19-Sep-2018 20:46:03 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 435
+[19-Sep-2018 21:01:02 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:09 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:09 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:36 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:01:42 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:21:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:21:53 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:21:53 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:21:53 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:22:06 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:22:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:22:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:23:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:23:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:23:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:23:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:23:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:23:26 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:24:05 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:24:06 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:24:07 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:24:10 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:24:24 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:25:00 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:26:34 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:26:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[19-Sep-2018 21:26:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Orders.php on line 443
+[20-Sep-2018 21:41:02 UTC] PHP Fatal error:  Call to a member function insert() on null in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 250
+[20-Sep-2018 21:41:53 UTC] PHP Fatal error:  Call to a member function insert() on null in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 250
+[20-Sep-2018 22:15:43 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting ';' in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 261
+[20-Sep-2018 22:33:50 UTC] PHP Parse error:  syntax error, unexpected '$response' (T_VARIABLE) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 604
+[20-Sep-2018 22:42:37 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 283
+[20-Sep-2018 22:42:42 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 283
+[20-Sep-2018 23:30:20 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ';' or '{' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 241
+[20-Sep-2018 23:31:44 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ';' or '{' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 241
+[20-Sep-2018 23:31:46 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ';' or '{' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 241
+[20-Sep-2018 23:32:13 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ';' or '{' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 241
+[26-Sep-2018 22:43:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2011
+[26-Sep-2018 22:43:16 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2001
+[26-Sep-2018 22:43:24 UTC] PHP Fatal error:  Cannot redeclare Shipper::ProcessPayment() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2031
+[26-Sep-2018 22:43:30 UTC] PHP Fatal error:  Cannot redeclare Shipper::ProcessPayment() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2031
+[26-Sep-2018 22:44:06 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/portal.api.freightdragon.info/system/core/Input.php on line 179
+[26-Sep-2018 22:44:33 UTC] PHP Fatal error:  Call to undefined method Shipper::ProcessPayment() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2020
+[26-Sep-2018 22:45:31 UTC] PHP Fatal error:  Call to undefined method Shipper::ProcessPayment() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2020
+[26-Sep-2018 23:01:44 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2018
+[26-Sep-2018 23:01:53 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2018
+[01-Oct-2018 20:01:25 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 306
+[01-Oct-2018 20:35:08 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysqli_result as array in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 297
+[01-Oct-2018 20:35:17 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysqli_result as array in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 297
+[05-Oct-2018 20:35:05 UTC] PHP Parse error:  syntax error, unexpected '||' (T_BOOLEAN_OR) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2363
+[05-Oct-2018 20:38:20 UTC] PHP Fatal error:  Call to undefined function act_on_empty() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2337
+[05-Oct-2018 20:55:33 UTC] PHP Fatal error:  Call to undefined method Shippers::MyCardInformation() in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2387
+[29-Oct-2018 16:42:00 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2052
+[29-Oct-2018 16:47:19 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2066
+[29-Oct-2018 16:47:42 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2066
+[06-Nov-2018 20:23:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 84 bytes) in /home/gecko/portal.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[14-Nov-2018 22:06:26 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 373
+[14-Nov-2018 22:06:26 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 373
+[14-Nov-2018 22:06:32 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 373
+[14-Nov-2018 22:06:35 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 373
+[14-Nov-2018 22:40:58 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 387
+[14-Nov-2018 22:41:01 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 387
+[14-Nov-2018 22:41:13 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 387
+[14-Nov-2018 22:41:17 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/gecko/portal.api.freightdragon.info/application/models/Shippers.php on line 387
+[16-Nov-2018 05:31:07 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1972
+[20-Nov-2018 07:32:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 982
+[20-Nov-2018 07:45:30 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 464
+[21-Nov-2018 20:38:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2299
+[21-Nov-2018 20:38:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2299
+[21-Nov-2018 20:43:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1333
+[21-Nov-2018 20:43:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1333
+[21-Nov-2018 20:43:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1333
+[21-Nov-2018 20:43:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1333
+[21-Nov-2018 20:43:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1705
+[21-Nov-2018 20:43:39 UTC] PHP Parse error:  syntax error, unexpected ''cc_n' (T_ENCAPSED_AND_WHITESPACE) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1798
+[21-Nov-2018 21:01:26 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 606
+[21-Nov-2018 21:02:38 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1471
+[21-Nov-2018 21:02:46 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 464
+[21-Nov-2018 21:04:25 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1787
+[21-Nov-2018 21:14:31 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1930
+[21-Nov-2018 21:15:33 UTC] PHP Warning:  Unterminated comment starting line 898 in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 898
+[21-Nov-2018 21:15:33 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 898
+[26-Nov-2018 20:19:34 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1797
+[26-Nov-2018 20:34:52 UTC] PHP Warning:  Unterminated comment starting line 1022 in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1022
+[26-Nov-2018 20:34:52 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 1025
+[26-Nov-2018 21:18:15 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 464
+[29-Nov-2018 18:56:17 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 606
+[29-Nov-2018 18:56:17 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 606
+[29-Nov-2018 19:27:32 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 2074
+[29-Nov-2018 20:53:00 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/models/Vehicles.php on line 20
+[29-Nov-2018 20:54:38 UTC] PHP Fatal error:  Call to a member function get_make() on null in /home/gecko/portal.api.freightdragon.info/application/controllers/Vehicle.php on line 18
+[29-Nov-2018 20:54:41 UTC] PHP Fatal error:  Call to a member function get_make() on null in /home/gecko/portal.api.freightdragon.info/application/controllers/Vehicle.php on line 18
+[29-Nov-2018 20:55:06 UTC] PHP Fatal error:  Call to a member function get_make() on null in /home/gecko/portal.api.freightdragon.info/application/controllers/Vehicle.php on line 18
+[29-Nov-2018 20:57:03 UTC] PHP Fatal error:  Call to a member function get_make() on null in /home/gecko/portal.api.freightdragon.info/application/controllers/Vehicle.php on line 18
+[29-Nov-2018 21:13:10 UTC] PHP Fatal error:  Call to a member function get_model() on null in /home/gecko/portal.api.freightdragon.info/application/controllers/Vehicle.php on line 52
+[10-Dec-2018 21:11:11 UTC] PHP Fatal error:  Cannot redeclare log() in /home/gecko/portal.api.freightdragon.info/application/helpers/logger_helper.php on line 9
+[10-Dec-2018 21:11:33 UTC] PHP Fatal error:  Cannot redeclare log() in /home/gecko/portal.api.freightdragon.info/application/helpers/logger_helper.php on line 9
+[10-Dec-2018 21:20:06 UTC] PHP Fatal error:  Call to undefined function validate_api_token() in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 10
+[10-Dec-2018 21:24:42 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/portal.api.freightdragon.info/application/helpers/app_helper.php on line 13
+[10-Dec-2018 21:29:17 UTC] PHP Fatal error:  Call to undefined method CI_Input::request_header() in /home/gecko/portal.api.freightdragon.info/application/helpers/app_helper.php on line 14
+[10-Dec-2018 21:29:21 UTC] PHP Fatal error:  Call to undefined method CI_Input::request_header() in /home/gecko/portal.api.freightdragon.info/application/helpers/app_helper.php on line 14
+[10-Dec-2018 21:56:56 UTC] PHP Parse error:  syntax error, unexpected 'write_response' (T_STRING), expecting ',' or ';' in /home/gecko/portal.api.freightdragon.info/application/helpers/app_helper.php on line 18
+[10-Dec-2018 22:55:21 UTC] PHP Fatal error:  Call to a member function post() on null in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 38
+[10-Dec-2018 22:59:30 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 43
+[10-Dec-2018 22:59:48 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 43
+[10-Dec-2018 23:10:42 UTC] PHP Fatal error:  Call to undefined method User::lang() in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 42
+[10-Dec-2018 23:10:55 UTC] PHP Fatal error:  Call to undefined function lang() in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 42
+[10-Dec-2018 23:28:09 UTC] PHP Fatal error:  Call to a member function authenticate() on null in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 45
+[10-Dec-2018 23:40:03 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 47
+[10-Dec-2018 23:40:26 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 47
+[10-Dec-2018 23:49:05 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting identifier (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 53
+[10-Dec-2018 23:49:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting identifier (T_STRING) in /home/gecko/portal.api.freightdragon.info/application/controllers/v2/User.php on line 53
+[12-Dec-2018 06:20:19 UTC] PHP Fatal error:  Call to a member function post() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 06:21:41 UTC] PHP Fatal error:  Call to a member function post() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 17
+[12-Dec-2018 06:22:31 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 21
+[12-Dec-2018 06:23:03 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 21
+[12-Dec-2018 06:23:50 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 21
+[12-Dec-2018 06:24:40 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 15
+[12-Dec-2018 06:26:18 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 10
+[12-Dec-2018 06:27:50 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 9
+[12-Dec-2018 14:23:30 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:23:30 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:23:30 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:23:30 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:23:30 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:23:41 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:23:41 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:23:43 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:11 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:18 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:34 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:34 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:56 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:24:56 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:25:10 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:25:13 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 14:25:56 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:16:37 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:16:37 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:16:37 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:16:37 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:16:37 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:16:44 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:17:36 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:17:51 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:18:56 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:18:57 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:00 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:00 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:01 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:01 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:01 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:01 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:01 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:02 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:02 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:02 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:19:02 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:21:22 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:27:13 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:27:26 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:27:58 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:29:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:37:37 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:41:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:41:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:42:08 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:42:09 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:42:10 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:47:31 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:48:06 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:56 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:57 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:57 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:57 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:57 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:56:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:57:13 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 15:57:15 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 16:17:23 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 16:53:16 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 18:59:26 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[12-Dec-2018 19:04:02 UTC] PHP Fatal error:  Call to a member function query() on null in /home/gecko/portal.api.freightdragon.info/application/hooks/Log.php on line 11
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:57:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:58:18 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:58:46 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:59:34 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 21:59:50 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 806
+[13-Dec-2018 22:00:23 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 436
+[13-Dec-2018 22:04:59 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/portal.api.freightdragon.info/application/controllers/Shipper.php on line 436
+[06-Feb-2019 06:48:59 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 18
+[06-Feb-2019 07:06:38 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 17
+[06-Feb-2019 07:07:57 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 18
+[06-Feb-2019 07:08:00 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 18
+[06-Feb-2019 07:22:56 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 18
+[06-Feb-2019 07:23:07 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 18
+[06-Feb-2019 07:24:11 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:24:40 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:24:45 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:25:07 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:25:10 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:26:53 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:26:56 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:26:57 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:30:20 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:30:37 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:31:19 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:33:43 UTC] PHP Fatal error:  Cannot re-assign $this in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:33:51 UTC] PHP Fatal error:  Cannot re-assign $this in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 10
+[06-Feb-2019 07:34:21 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 18
+[06-Feb-2019 07:34:25 UTC] PHP Fatal error:  Class 'Logger' not found in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 18
+[06-Feb-2019 07:48:18 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 12
+[06-Feb-2019 07:48:42 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 12
+[06-Feb-2019 07:50:51 UTC] PHP Fatal error:  Cannot redeclare log_request() (previously declared in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php:10) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 42
+[06-Feb-2019 07:51:02 UTC] PHP Fatal error:  Cannot redeclare log_request() (previously declared in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php:10) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 42
+[06-Feb-2019 08:00:58 UTC] PHP Fatal error:  Call to a member function set_rules() on null in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 23
+[06-Feb-2019 08:01:20 UTC] PHP Fatal error:  Call to a member function set_rules() on null in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 24
+[06-Feb-2019 08:01:22 UTC] PHP Fatal error:  Call to a member function set_rules() on null in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 24
+[06-Feb-2019 08:01:41 UTC] PHP Fatal error:  Call to a member function set_rules() on null in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 24
+[06-Feb-2019 08:01:45 UTC] PHP Fatal error:  Call to a member function set_rules() on null in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 24
+[06-Feb-2019 08:32:03 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 9
+[06-Feb-2019 08:32:31 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 9
+[06-Feb-2019 08:32:34 UTC] PHP Fatal error:  Using $this when not in object context in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 9
+[06-Feb-2019 18:09:01 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gecko/app.api.freightdragon.info/application/controllers/Auth.php on line 23
+[06-Feb-2019 18:36:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2048 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 18:39:14 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2048 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 18:45:19 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2048 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 18:45:23 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2048 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 18:52:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 94 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 18:52:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 94 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 19:22:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 87 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 20:03:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 25 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[06-Feb-2019 20:23:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gecko/app.api.freightdragon.info/application/models/Accounts.php on line 17
+[06-Feb-2019 21:56:37 UTC] PHP Fatal error:  Call to a member function result() on boolean in /home/gecko/app.api.freightdragon.info/application/models/Accounts.php on line 41
+[07-Feb-2019 20:50:45 UTC] PHP Fatal error:  Undefined class constant 'ENTITY_TYPE' in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 111
+[07-Feb-2019 22:23:11 UTC] PHP Fatal error:  Undefined class constant 'DATE_TYPE' in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 163
+[07-Feb-2019 22:28:20 UTC] PHP Fatal error:  Call to a member function getFilteredPaymentsTotals() on null in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 258
+[07-Feb-2019 22:30:29 UTC] PHP Fatal error:  Undefined class constant 'BALANCE_PAID_BY' in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 312
+[07-Feb-2019 22:30:32 UTC] PHP Fatal error:  Undefined class constant 'BALANCE_PAID_BY' in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 312
+[08-Feb-2019 22:53:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 85 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[12-Feb-2019 16:50:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 608 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 305
+[12-Feb-2019 16:52:05 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 608 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 305
+[12-Feb-2019 16:52:17 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 608 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 305
+[13-Feb-2019 16:27:16 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4517419 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 16:28:23 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 20 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 16:28:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 95 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 16:28:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262105 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 16:40:14 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2819686 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 16:41:36 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2823740 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 16:43:49 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2687129 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 16:44:10 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2629977 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 17:00:59 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262125 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:00 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2842500 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2822630 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2359263 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:03 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2621416 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:04 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2818050 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:05 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2644050 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:05 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5238039 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 17:01:06 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2695701 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:07 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5037413 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 17:01:08 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2751562 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 17:01:09 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2783436 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 17:01:10 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4738249 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 17:01:11 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2790104 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 17:01:12 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2553122 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[13-Feb-2019 18:28:11 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:12 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:12 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:13 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:14 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 75 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:15 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 81 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:16 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 80 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:17 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:18 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 20 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 18:28:19 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262188 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:20 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 77 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:28:20 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 608 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 305
+[13-Feb-2019 18:28:21 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262252 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:22 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1310748 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:23 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2097158 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2621444 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:25 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2621444 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:26 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2359864 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:27 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2762493 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:28:28 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5237057 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:28:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5070083 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:28:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5186351 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:31:37 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 85 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 18:31:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 80 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 6 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 18:31:41 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 80 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 72 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:44 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 18:31:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 80 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:46 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 608 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 305
+[13-Feb-2019 18:31:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262108 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 524486 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:49 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:50 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:31:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262183 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:52 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2097210 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:52 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2883601 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:53 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2909291 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:54 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2761839 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:55 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2713630 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:31:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4931499 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:31:57 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4989809 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:31:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2763435 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:31:59 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2775097 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:39:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 82 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 95 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 85 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:41 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 81 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 434 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 18:39:44 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 77 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 80 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:46 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 77 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 75 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:49 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:50 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262188 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1310706 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:52 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:39:53 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048565 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:54 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2097217 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:55 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2706820 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2640405 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:57 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2833628 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2814706 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:39:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2573317 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[13-Feb-2019 18:39:59 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2608275 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:40:00 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2591703 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:40:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2700381 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:40:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2474098 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[13-Feb-2019 18:43:23 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 608 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 305
+[13-Feb-2019 18:43:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 18:43:25 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 80 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:26 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 75 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:27 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 85 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:28 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 84 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:30 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:31 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:32 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:33 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:34 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:35 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:35 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:36 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:37 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 18:43:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 105960 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:43:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2621526 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:43:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2851145 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:43:41 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:43:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 786510 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:43:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1310722 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:43:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2883543 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:43:44 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5183553 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:43:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2783110 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:43:46 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2756931 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:43:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2568227 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:51:34 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 77 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:35 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 77 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:36 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 95 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:37 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 81 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:41 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 85 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:44 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 524252 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:51:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:46 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 786441 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:51:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 18:51:49 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 524323 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:51:50 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048609 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:51:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2798081 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:51:52 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5067901 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:51:52 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2734842 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:51:53 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2790270 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 18:51:54 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5118733 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:51:55 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4892689 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 18:51:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2664011 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 18:51:57 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2511890 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[13-Feb-2019 18:51:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2687677 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 19:12:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2526531 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[13-Feb-2019 19:12:59 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2612846 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 19:29:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:23 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 19:30:25 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 256 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:26 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 322
+[13-Feb-2019 19:30:27 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 128 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:28 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 81 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 95 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:30 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:31 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:32 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:33 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:34 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:35 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:36 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048576 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:36 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262167 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 19:30:37 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1572825 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 19:30:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1048655 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 19:30:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 85 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:41 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 256 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 19:30:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 8 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 654
+[13-Feb-2019 19:30:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 262216 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[13-Feb-2019 19:30:44 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5040401 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[13-Feb-2019 19:30:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2587707 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 19:30:46 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2607589 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[13-Feb-2019 19:30:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2495064 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[13-Feb-2019 21:57:28 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 21:58:07 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 21:58:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 95 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 21:58:46 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 87 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 21:58:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 77 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 21:58:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 256 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_result.php on line 237
+[13-Feb-2019 21:59:10 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5238491 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[15-Feb-2019 08:05:18 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1572827 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[15-Feb-2019 08:05:30 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2359289 bytes) in /home/gecko/app.api.freightdragon.info/application/helpers/app_helper.php on line 41
+[15-Feb-2019 08:05:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4885033 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[15-Feb-2019 08:10:58 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2481654 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[15-Feb-2019 08:30:09 UTC] PHP Parse error:  syntax error, unexpected '$fields' (T_VARIABLE) in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 143
+[15-Feb-2019 08:33:23 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 272
+[15-Feb-2019 08:34:28 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 143
+[15-Feb-2019 08:34:31 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/gecko/app.api.freightdragon.info/application/models/Orders.php on line 143
+[15-Feb-2019 20:39:54 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5092265 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[15-Feb-2019 21:00:18 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2587515 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[15-Feb-2019 21:12:52 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2468788 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[15-Feb-2019 21:16:48 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2539671 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[15-Feb-2019 21:20:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2580518 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[15-Feb-2019 21:23:50 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2599120 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[15-Feb-2019 21:27:10 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2630099 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[15-Feb-2019 21:27:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2789664 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[15-Feb-2019 21:31:19 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2539572 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[15-Feb-2019 21:31:53 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2627704 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[15-Feb-2019 21:34:57 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2657447 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[15-Feb-2019 21:35:52 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2582922 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[16-Feb-2019 00:09:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2490591 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[16-Feb-2019 00:28:13 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5040235 bytes) in /home/gecko/app.api.freightdragon.info/system/database/drivers/mysqli/mysqli_driver.php on line 391
+[16-Feb-2019 00:29:21 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2500512 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[16-Feb-2019 00:29:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2639500 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[16-Feb-2019 00:30:37 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2575614 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[16-Feb-2019 00:30:54 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2603707 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[16-Feb-2019 00:31:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2560598 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[16-Feb-2019 00:35:39 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2541054 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[19-Feb-2019 19:39:25 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2567339 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1477
+[19-Feb-2019 19:40:18 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2764299 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[19-Feb-2019 19:43:55 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2628299 bytes) in /home/gecko/app.api.freightdragon.info/system/database/DB_driver.php on line 1108
+[03-May-2019 21:13:42 UTC] PHP Fatal error:  Call to undefined method Order::get_synced_count() in /home/gecko/app.api.freightdragon.info/application/controllers/Order.php on line 33
+[04-May-2019 07:00:12 America/New_York] PHP Fatal error:  Arrays are not allowed in class constants in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 11
+[04-May-2019 07:01:25 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 202
+[04-May-2019 07:01:28 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 202
+[04-May-2019 07:02:21 America/New_York] PHP Fatal error:  Arrays are not allowed in class constants in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 11
+[04-May-2019 07:12:37 America/New_York] PHP Fatal error:  Arrays are not allowed in class constants in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 11
+[04-May-2019 07:17:48 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 380
+[04-May-2019 07:17:51 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 380
+[04-May-2019 07:18:31 America/New_York] PHP Fatal error:  Arrays are not allowed in class constants in /home/dragon/app.api.freightdragon.com/dragon/application/models/Payments.php on line 18
+[04-May-2019 08:15:16 America/New_York] PHP Fatal error:  Call to undefined method Orders::checkDepositColor() in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 300
+[04-May-2019 08:17:16 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 382
+[04-May-2019 08:18:39 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 394
+[04-May-2019 08:19:17 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 382
+[04-May-2019 08:20:13 America/New_York] PHP Fatal error:  Call to undefined method Orders::checkDepositColor() in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 300
+[04-May-2019 08:23:34 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 415
+[04-May-2019 08:23:50 America/New_York] PHP Fatal error:  Call to undefined method Orders::checkTariffColor() in /home/dragon/app.api.freightdragon.com/dragon/application/models/Orders.php on line 301

@@ -1,0 +1,66 @@
+.pad-l-0 {
+    padding-left: 0px !important;
+}
+
+.pad-t-15 {
+    padding-top: 15px !important;
+}
+
+#hello {
+    margin-top: -10px !important;
+    margin-bottom: 15px !important;
+}
+
+.manage-header-section #header-label
+{
+	margin:0 !important;
+}
+
+.manage-header-section
+{
+    padding-top: 5px;
+    padding-right: 0px;
+}
+
+.header-label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.manage-select-box {
+    width: 150px !important;
+    display: inline !important;
+    background: #27283d !important;
+    color: #485057 !important;
+    border: none !important;
+}
+
+#kt_header {
+    background: #1f1e2e !important;
+}
+
+#kt_header h6,
+#kt_header label font,
+#kt_header h1 {
+    color: #6c6e86 !important;
+}
+
+.kt-checkbox.kt-checkbox--success.kt-checkbox--success>span,
+.kt-checkbox.kt-checkbox--success>span:after {
+    border-color: #32adf3 !important;
+}
+
+.menu-link {
+    height: 45px;
+}
+
+option {
+    background: #cccccc !important;
+}
+
+#top-most-header {
+    min-width: 73%;
+    height: 115px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,17 @@
+.top_menu td a .tm_l, .top_menu td a .tm_c, .top_menu td a .tm_r {
+	filter:expression(fixPNG(this));
+}
+.search .text_field {
+	margin-right: 5px;
+}
+.left_col .block a.btn {
+	filter:expression(fixPNG(this));
+}
+.left_col .block .btm {
+	filter:expression(fixPNG(this));
+}
+
+
+.grid-head td.grid-head-left, .grid-head td.grid-head-right {
+    background: #3757bc url(../images/grid/head-bg.gif) repeat-x;
+}

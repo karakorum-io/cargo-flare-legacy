@@ -1,0 +1,45 @@
+Shipper First Name: John
+Shipper Last Name: Doe
+Shipper Email: mail@test.com
+Shipper Phone 1: 808-000-0001
+Shipper Phone 2: 954-111-1111
+Shipper Fax: 954-111-0001
+Shipper Address: 1048 Heron Bay Blvd Suite 100
+Shipper City: Coral Springs
+Shipper State: FL
+Shipper Zip: 33076
+Shipper Country: US
+ 
+VEHICLE #1 INFORMATION
+Year: 2004
+Make: Mercedes-Benz
+Model: C-Class
+VIN:
+Lot:
+Plate:
+Color:
+Vehicle Type: sedan
+Does the vehicle run?: Yes
+ 
+VEHICLE #2 INFORMATION
+Year2: 2001
+Make2: Volvo
+Model2: C-Class
+VIN2:
+Lot2:
+Plate2:
+Color2:
+Vehicle Type2: van
+Does the vehicle run2?: No
+ 
+PICKUP AND DELIVERY INFORMATION
+Pickup City: wahiawa
+Pickup State: HI
+Pickup Zip: 96786
+Pickup Country: US
+Delivery City: el paso
+Delivery State: TX
+Delivery Zip: 33078
+Delivery Country: US
+ 
+Moving Date: 8/8/2012

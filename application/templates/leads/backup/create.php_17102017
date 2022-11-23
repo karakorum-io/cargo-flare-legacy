@@ -1,0 +1,308 @@
+<?php if ($_GET['leads'] == 'create') { ?>
+<script type="text/javascript">
+	var v = <?=(isset($_POST['year']))?count($_POST['year']):0?>;
+    function createAndEmail() {
+        $("#co_send_email").val("1");
+        $("#submit_button").click();
+    }
+
+
+var tempDisableBeforeUnload = false;
+$(window).bind('beforeunload', function(){
+					//alert('=='+tempDisableBeforeUnload);					
+   if($("#shipper_fname").val()!='' &&
+	$("#shipper_lname").val()!='' &&
+	$("#shipper_company").val()!='' &&
+	$("#shipper_email").val()!='' && !tempDisableBeforeUnload)
+	{
+		  return 'Leaving this page will lose your changes. Are you sure?';
+	}
+	else{	
+	   tempDisableBeforeUnload = false;
+	   return;
+	   
+	}
+});
+
+		$(document).ready(function(){
+		
+		
+		var createForm = $('#create_form');
+		createForm.find("input.shipper_company-model").autocomplete({
+			source: function(request, response) {
+				$.ajax({
+					url: '<?= SITE_IN ?>application/ajax/autocomplete.php',
+					type: 'GET',
+					dataType: 'json',
+					data: {
+						term: request.term,
+						action: 'getCompany'
+					},
+					success: function(data) {
+						response(data);
+					}
+				})
+			},
+			minLength: 0,
+			autoFocus: true,
+			change: function() {
+				//createForm.find("input.shipper_company-model").val('');
+				var shipper_company = createForm.find("input.shipper_company-model").val();
+				//alert(shipper_company);
+				if(shipper_company !="")
+				{
+					$.ajax({
+						url: '<?= SITE_IN ?>application/ajax/autocomplete.php',
+						type: 'GET',
+						dataType: 'json',
+						data: {
+							term: shipper_company,
+							action: 'getCompanyValues'
+						},
+						success: function(data) {
+							//response(data);
+						 if(Object.keys(data).length > 0)
+						 {
+							if(data.first_name!='N/A' && data.first_name!='' && data.first_name!=null)
+							  $("#shipper_fname").val(data.first_name);
+							if(data.last_name!='N/A' && data.last_name!='' && data.last_name!=null)  
+				              $("#shipper_lname").val(data.last_name);
+							$("#shipper_email").val(data.email);
+							$("#shipper_phone1").val(data.phone1);
+							$("#shipper_phone2").val(data.phone2);
+							$("#shipper_mobile").val(data.cell);
+							$("#shipper_fax").val(data.fax);
+							$("#shipper_address1").val(data.address1);
+							$("#shipper_address2").val(data.address2);
+							$("#shipper_city").val(data.city);
+							$("#shipper_country").val(data.country);
+							//if (data.country == "US") {
+								$("#shipper_state").val(data.state);
+							//} else {
+								//$("#shipper_state2").val(data.state);
+							//}
+							$("#shipper_zip").val(data.zip_code);
+							$("#shipper_type").val(data.shipper_type);
+							if(data.referred_id !=0 && data.referred_by !='' && data.referred_id !=null){
+							  // $("#referred_by").val(data.referred_id);
+							   //$('#referred_by').prop('disabled', true);
+							   
+							    $("#referred_by").empty(); // remove old options
+								$("#referred_by").append($("<option></option>")
+									 .attr("value", data.referred_id).text(data.referred_by));
+							  }
+							  else
+							  {
+								  $("#referred_by").empty(); // remove old options
+								  $("#referred_by").append($("<option></option>")
+									               .attr("value", '').text('Select One'));
+								  <?php 
+								   foreach ($this->referrers_arr as $key=>$referrer) {
+                                   ?>
+												  $("#referred_by").append($("<option></option>")
+									               .attr("value", '<?php print $key;?>').text('<?php print $referrer;?>'));
+								<?php
+                                     }
+								  ?>
+								  
+							  }
+							
+						}
+						else
+						  {
+							  $("#referred_by").empty(); // remove old options
+									  $("#referred_by").append($("<option></option>")
+													   .attr("value", '').text('Select One'));
+									  <?php 
+									   foreach ($this->referrers_arr as $key=>$referrer) {
+									   ?>
+													  $("#referred_by").append($("<option></option>")
+													   .attr("value", '<?php print $key;?>').text('<?php print $referrer;?>'));
+									<?php
+										 }
+									  ?>  
+						  }
+					  } //if data found
+					 
+					})
+				}
+			}
+		});
+		
+	});
+		
+function addQuickNote() {
+	var textOld = $("#note_to_shipper").val();
+	
+	var str = textOld + " " + $("#quick_notes").val();
+	$("#note_to_shipper").val(str);
+}
+</script>
+<script type="text/javascript" src="<?=SITE_IN?>jscripts/application/quotes/create.js"></script>
+<?php } else { ?>
+<script type="text/javascript">
+	var entityBlocked = <?=($this->entity->isBlocked())?'true':'false'?>;
+	var entity_id = <?=$this->entity->id?>;
+	var entity_number = '<?=$this->entity->getNumber()?>';
+</script>
+<script type="text/javascript" src="<?=SITE_IN?>jscripts/application/quotes/edit.js"></script>
+<?php } ?>
+<script type="text/javascript" src="<?=SITE_IN?>jscripts/application/quotes/create_edit.js"></script>
+<?php if ($_GET['leads'] == 'create') { ?>
+<?php include(ROOT_PATH.'application/templates/vehicles/create_js.php');?>
+<?php } else { ?>
+<div style="padding-top:15px;">
+	<?php include('lead_menu.php');  ?>
+</div>
+<?php include(ROOT_PATH.'application/templates/vehicles/edit_js.php'); ?>
+<?php } ?>
+<?php include(ROOT_PATH.'application/templates/vehicles/form.php');?>
+<br/>
+<h3>@title@</h3>
+<div style="clear:both;"></div>
+Complete the form below and click Save when finished. Required fields are marked with a <span style="color:red;">*</span><br/><br/>
+<input type="hidden" id="lead_id" value="<?=(isset($_GET['id'])?$_GET['id']:'')?>"/>
+<form action="<?= ($_GET['leads'] == 'create')?getLink('leads/create'):getLink('leads/edit/id/'.$_GET['id']) ?><?php echo isset($_GET['convert'])?'?convert':'' ?>" method="post"   onsubmit="javascript:tempDisableBeforeUnload = true;" id="create_form">
+<?php if (isset($_GET['convert'])) { ?>
+	<input type="hidden" name="convert" value="1"/>
+<?php } ?>
+<div class="quote-info" style="float:none;">
+	<p class="block-title">Shipper Information</p>
+	<div>
+		<table cellspacing="0" cellpadding="0" border="0" width="100%" class="form-table quote-edit" style="white-space:nowrap;">
+			<tr>
+				<td>&nbsp;</td><td><? //print ($_GET['leads'] == 'create')?functionButton('Select Shipper', 'selectShipper()'):'&nbsp;'?></td>
+				<td>@shipper_email@</td>
+				<td>@shipper_address1@</td>
+			</tr>
+			<tr>
+				<td>@shipper_fname@</td>
+				<td>@shipper_phone1@</td>
+				<td>@shipper_address2@</td>
+			</tr>
+			<tr>
+				<td>@shipper_lname@</td>
+				<td>@shipper_phone2@</td>
+				<td>@shipper_city@</td>
+			</tr>
+			<tr>
+				<td>@shipper_company@</td>
+				<td>@shipper_mobile@</td>
+				<td>@shipper_state@@shipper_zip@</td><div id="notes_container"></div>
+			</tr>
+			<!--tr>
+				<?php if ($_GET['quotes'] == 'create') { ?>
+				<td align="right">@shipper_add@</td>
+				<?php } else { ?>
+				<td colspan="2">&#8203;</td>
+				<?php } ?>
+				<td>@shipper_fax@</td>
+				<td>@shipper_country@</td>
+			</tr-->
+			
+			<tr>
+				<td>@shipper_type@</td>
+				<td>@shipper_fax@</td>
+				<td>@shipper_country@</td>
+			</tr>
+			<tr>
+				<td>@shipper_hours@</td>
+				<td>@referred_by@</td> 
+				<td>&nbsp;</td><td>&nbsp;</td>
+			</tr>
+			
+            <tr>
+				<td>@shipper_add@</td>
+				<td>&nbsp;</td> 
+				<td>&nbsp;</td><td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<br/>
+<div class="quote-info" style="float:none;">
+	<p class="block-title">Additional Information</p>
+	<div>
+		<table cellspacing="0" cellpadding="0" border="0" width="100%" class="form-table quote-edit" style="white-space:nowrap;">
+			
+			
+			<tr>
+			<td>@units_per_month@</td>
+			<td>@buysell[]@</td>
+			
+			</tr>
+            <tr>
+				<td>@shipment_type@</td>
+				<td>@buysell_days[]@</td> 
+				
+			</tr>
+            <tr>
+				<td>@website@</td>
+				<td>@next_shipping_date@</td> 
+				
+			</tr>
+            <tr>
+                <td>Notes</td>
+				<td colspan="5">@note_to_shipper@</td>
+				
+			</tr>
+            
+            <tr>
+                <td><div style="float:left; padding:2px;">
+Quick Notes&nbsp;
+</div></td>
+				<td colspan="5">
+                  
+         <div style="float:left; padding:2px;"><select name="quick_notes" id="quick_notes" onchange="addQuickNote();">
+<option value="">--Select--</value>
+<option value="Emailed: Prospect.">Emailed: Prospect.</value>
+<option value="Emailed: Bad Email.">Emailed: Bad Email.</value>
+<option value="Faxed: Prospect.">Faxed: Prospect.</value>
+<option value="Faxed: Bad Fax.">Faxed: Bad Fax.</value>
+<option value="Texted: Prospect.">Texted: Prospect.</value>
+<option value="Texted: Bad Mobile.">Texted: Bad Mobile.</value>
+<option value="Phoned: No Voicemail.">Phoned: No Voicemail.</value>
+<option value="Phoned: Left Message.">Phoned: Left Message.</value>
+<option value="Phoned: Spoke to Prospect.">Phoned: Spoke to Prospect.</value>
+<option value="Phoned: Bad Number.">Phoned: Bad Number.</value>
+<option value="Phoned: Not Intrested.">Phoned: Not Intrested.</value>
+<option value="Phoned: Do Not Call.">Phoned: Do Not Call.</value>
+</select>
+</div>
+                </td>
+				
+			</tr>
+            
+		</table>
+	</div>
+</div>
+<br/>
+<div style="float:right">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td>
+				<input type="hidden" name="send_email" value="0" id="co_send_email"/>
+				<?php //print functionButton("Save &amp; Email", 'createAndEmail();'); ?>
+			</td>
+			<td style="padding-left: 15px;"><?= submitButtons(SITE_IN."application/quotes", "Save") ?></td>
+		</tr>
+	</table>
+</div>
+</form>
+
+<script type="text/javascript">//<![CDATA[
+    $("#buysell").multiselect({ // Build multiselect for users
+        noneSelectedText: 'Select',
+        selectedText: '# selected',
+        selectedList: 1
+    });
+	
+	$("#buysell_days").multiselect({ // Build multiselect for users
+        noneSelectedText: 'Select',
+        selectedText: '# selected',
+        selectedList: 1
+    });
+	
+    
+   
+    //]]></script>
