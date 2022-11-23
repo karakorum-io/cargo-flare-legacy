@@ -1,0 +1,31 @@
+.span4 {width: 140px; }
+.span5 { width: 170px;}
+[class*="span"] { float: left; min-height: 1px; margin-left: 10px; }
+
+.products-grid {position:relative; margin-bottom:30px; }
+.products-grid li.item {float:left;	padding:15px; background: #fafafa; -moz-box-sizing:border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.products-grid li.item {font-family: 'Trebuchet MS'; padding: 0;}
+.product-name-bg {margin: 0;}
+.product-name-bg a {display: block; ackground: -webkit-gradient(linear, 0 0, 0 bottom, from(#2e8ec1), to(#1e5f8b));
+background: -webkit-linear-gradient(#2e8ec1, #1e5f8b); background: -moz-linear-gradient(#2e8ec1, #1e5f8b); background: -ms-linear-gradient(#2e8ec1, #1e5f8b); background: -o-linear-gradient(#2e8ec1, #1e5f8b); background: linear-gradient(#2e8ec1, #1e5f8b); -pie-background: linear-gradient(#2e8ec1, #1e5f8b); font-size: 24px; line-height: 34px; color: #fff; font-weight: normal; padding:10px 0px; cursor: default; text-decoration:none; text-align:center;}
+.btn-naw {display: block; background: #2267B6; background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a8bd1d), to(#839711)); background: -webkit-linear-gradient(#a8bd1d, #839711); background: -moz-linear-gradient(#a8bd1d, #839711); background: -ms-linear-gradient(#a8bd1d, #839711);
+background: -o-linear-gradient(#a8bd1d, #839711); background: linear-gradient(#a8bd1d, #839711); -pie-background: linear-gradient(#a8bd1d, #839711); behavior: url(PIE.htc); color: #fff; font-size: 20px; line-height: 52px; text-align: center; padding-bottom: 2px;}
+.btn-naw span {display: inline-block;  background: url(../images/banner-block-link.png) no-repeat right 12px;}
+.btn-naw:hover {background: #303030;}
+.btn-naw:hover span {color: #fff;}
+.price-box-bg {background: #c8cacb; font-size: 34px; color: #fff;  overflow: hidden; padding:0px 15px 20px;}
+.products-grid .price-box {width: auto; display: inline-block; float: left; margin: 0 0px 0 0;}
+.price-box h1 { font-size: 23px; color: #839711; font-weight: normal; text-align:center; }
+.price-box h2 { font-size: 25px; color: #fff; font-weight: bold; text-align:center; margin-top:10px; line-height:30px;  }
+.price-box h3 { ont-weight: normal; font-size:15px; line-height:20px; margin:50px 0 20px 0;  }
+.desc_grid {margin: 0;}
+.desc_grid ul li {border-bottom: 1px solid #eeeeee; padding: 15px 10px 0 10px; overflow: hidden; text-align:center; height:47px; }
+.desc_grid ul li span {}
+.desc_grid ul li strong {float: right; font-size: 18px; color: #565656;}
+.desc_grid ul li:last-child {border: 0;}
+.desc_grid1 {margin: 0; padding-bottom:55px;}
+.desc_grid1 ul li {border-bottom: 1px solid #eeeeee;	padding: 10px 10px 0 10px; overflow: hidden; text-align:left; height:52px; }
+.desc_grid1 ul li span {}
+.desc_grid1 ul li strong {float: right; font-size: 18px; color: #565656;}
+/* Clears ================================================================================ */
+.clear {clear: both; display: block; overflow: hidden; visibility: hidden;width: 0;height: 0;}

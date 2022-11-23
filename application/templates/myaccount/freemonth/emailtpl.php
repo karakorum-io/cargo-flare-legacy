@@ -1,0 +1,1 @@
+<? include(ROOT_PATH."app/templates/email/freemonth.php");?>

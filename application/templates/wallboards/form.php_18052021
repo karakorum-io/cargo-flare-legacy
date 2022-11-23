@@ -1,0 +1,142 @@
+<?php
+/**
+ * UI created to add and edit wall boards
+ * 
+ * @author Chetu Inc.
+ * @version 1.0
+ */
+
+$agents = $this->daffny->agents;
+$availAgents = $this->daffny->availAgents;
+
+?>
+<link rel="stylesheet" href="<?php echo SITE_IN ?>styles/wallboard.css">
+<script src="<?php echo SITE_IN ?>jscripts/wallboard.js"></script>
+<script src="<?php echo SITE_IN ?>jscripts/md5.js"></script>
+
+<?php
+    $id = explode("/",$_GET['url']);
+    $ID =$id[2];
+    
+    if($ID == NULL){
+        $action = getLink("wallboards", "add_edit");
+    } else {
+        $action = getLink("wallboards", "add_edit", $ID);
+    }
+?>
+<form id="add_edit_wallboard_form" action="<?php echo $action; ?>" method="post">
+    
+    <div id="addAgentListDiv">
+        <?php
+            for($i=0;$i<count($agents);$i++){                
+                ?>
+                <input type="hidden" name="agentList[]" value="<?php echo $agents[$i]['agent_id'];?>">
+                <input type="hidden" name="agentName[]" value="<?php echo $agents[$i]['agent_name'];?>">
+                <?php
+            }
+        ?>
+    </div>
+    
+      <?php
+    if ($ID > 0) {
+        $formTitle = "Edit Wallboard";
+    } else {
+        $formTitle = "Add Wallboard";
+    }
+    echo formBoxStart($formTitle);
+    ?>
+
+
+  <div class="row alert alert-light alert-elevate mt-4">
+    <div class="col-12">
+        <div class="row mt-4">
+            <div class="col-6">
+
+            <div class="row">
+            <div class="col-6">
+            @title@
+            </div>
+
+            <div class="col-6">
+               @hash@
+            <div class="hash_pass mt-2 text-right">
+            <input onclick="generateHash()" type="button" class="btn-sm btn-dark" id="hash-button" value="Generate Hash">
+            </div>
+            </div>
+            </div>
+
+               <div class="row">
+            <div class="col-6">
+           @forward_email@
+            </div>
+
+            <div class="col-6">
+           @status@
+            </div>
+            </div>
+
+            </div>
+
+             <div class="col-6">
+
+
+            <div class="row">
+            <div class="col-6">
+                <h4>Available Agents</h4>
+                <ul id="allAgents" class="connectedSortable">
+                <?php
+                for($i=0;$i<count($availAgents);$i++){ 
+                    if($availAgents[$i]['contactname'] !=''){
+                ?>
+                        <li class="ui-state-default"><?php echo $availAgents[$i]['contactname'];?>
+                            <br>
+                            <input type="hidden" name="agent" value="<?php echo $availAgents[$i]['id'];?>">
+                        </li>
+                <?php
+                    }
+                }
+                ?>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                 <h4>Assigned Agents</h4>
+                <ul id="addedAgents" class="connectedSortable">
+                    <?php
+                        for($i=0;$i<count($agents);$i++){                
+                    ?>
+                    <li class="ui-state-default"><?php echo $agents[$i]['agent_name'];?>
+                        <br>
+                        <input type="hidden" name="agent" value="<?php echo $agents[$i]['agent_id'];?>">
+                    </li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </div>
+            </div>
+
+
+
+            </div>
+        </div>
+ <?php echo formBoxEnd() ?>
+    <br />
+    <?php echo submitButtons(getLink("wallboards")) ?> &nbsp;
+   
+    </div>
+</div>
+        <script>
+
+
+
+            $(document).ready( function (){
+                $(".form-box-white-content").children("h4").addClass("h4");
+                
+            });
+            </script>
+            
+   
+    
+   
+</form>

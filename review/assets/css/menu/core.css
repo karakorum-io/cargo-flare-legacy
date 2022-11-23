@@ -1,0 +1,38 @@
+/* reset --------------------------------- */
+.fdmenu, .fdmenu ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+/* --------------------------------------- */
+.fdmenu li, .fdmenu ul a {position:relative;}
+.fdmenu > li {float:left;}
+.fdmenu > li.floatr {float:right;}
+.fdmenu li > a {display:block;}
+/* --------------------------------------- */
+.fdmenu ul {
+	position:absolute;
+	display:none;
+	width:155px;
+}
+.fdmenu ul ul {
+	top:0;
+	left:155px;
+}
+.fdmenu > li.floatr > ul {right:0;}
+.fdmenu > li.floatr > ul ul {left:-155px;}
+.fdmenu li:hover > ul {display:block;}
+/* mega menu ----------------------------- */
+.fdmenu .cols1, .fdmenu .cols2, .fdmenu .cols3, .fdmenu .cols4, .fdmenu .cols5 {
+	position:absolute;
+	display:none;
+	overflow:auto;
+}
+.fdmenu .cols1, .fdmenu .col1 {width:160px;}
+.fdmenu .cols2, .fdmenu .col2 {width:320px;}
+.fdmenu .cols3, .fdmenu .col3 {width:480px;}
+.fdmenu .cols4, .fdmenu .col4 {width:640px;}
+.fdmenu .cols5, .fdmenu .col5 {width:800px;}
+.fdmenu > li.floatr > div {right:155px;}
+.fdmenu > li:hover > div {display:block;}
+.fdmenu .col1, .fdmenu .col2, .fdmenu .col3, .fdmenu .col4, .fdmenu .col5 {float:left;}

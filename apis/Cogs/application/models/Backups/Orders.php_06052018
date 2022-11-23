@@ -1,0 +1,391 @@
+<?php
+
+/**
+ * Orders controller for performing functionalities related to the orders in 
+ * customer portal
+ * 
+ * @author Chetu Inc.
+ * @version 1.0
+ * @link www.chetu.com
+ */
+class Orders extends CI_Model {
+
+    const TABLE = 'app_order_header';
+    const VEHILCE_TABLE = 'app_vehilces';
+    const ENTITY_TYPE = 3;
+    const STATUS = array(
+        'DELIVERED' => 9,
+        'PICKED_UP' => 8,
+        'ISSUES' => 7,
+        'DISPATCHED' => 6,
+        'NOT_SIGNED' => 5,
+        'POSTED' => 4,
+        'CANCELLED' => 3,
+        'ON_HOLD' => 2,
+        'MY_ORDERS' => 1,
+    );
+    const DATE_TYPE = array(
+        1 => "Estimated",
+        2 => "Exactly",
+        3 => "Not Earlier Than",
+        4 => "Not Later Than"
+    );
+    const BALANCE_PAID_BY = array(
+        'COD_COP' => array(2, 3, 8, 9),
+        'BILLING' => array(12, 13, 20, 21, 24),
+        'INVOICE' => array(14, 15, 22, 23)
+    );
+
+    /**
+     * Constructor to load the dependencies at the time of controller call
+     */
+    public function __construct() {
+        parent::__construct();
+        {
+            $this->load->helper('url');
+            $this->load->library('form_validation');
+            $this->load->database();
+            $this->load->library('email');
+            $this->load->model('payments');
+        }
+    }
+    
+    /**
+     * function used to pull the order details on the basis of entity id 
+     * 
+     * @param int $entityid entity id of a order
+     * @author Chetu Inc.
+     * @return Array Order detail data
+     */
+    public function getOrderData($entity_id,$account_id) {
+        
+        $order_details = array();
+        
+        if(is_numeric ($entity_id)){
+        
+            $sql = "SELECT * FROM `app_order_header` WHERE `entityid` = {$entity_id} AND account_id = {$account_id}";
+            $query = $this->db->query($sql);
+            $from_app_order_header = $query->result_array();
+
+            if(count($from_app_order_header)>0){
+
+                $shipper_id = $from_app_order_header[0]['shipper_id'];
+                $origin_id = $from_app_order_header[0]['origin_id'];
+                $destination_id = $from_app_order_header[0]['destination_id'];
+
+                $sql = "SELECT * FROM `app_shippers` WHERE id = {$shipper_id}";
+                $query = $this->db->query($sql);
+                $from_app_shippers = $query->result_array();
+
+                $sql = "SELECT * FROM `app_locations` WHERE id = {$origin_id}";
+                $query = $this->db->query($sql);
+                $from_app_locations_origin = $query->result_array();
+
+                $sql = "SELECT * FROM `app_locations` WHERE id = {$destination_id}";
+                $query = $this->db->query($sql);
+                $from_app_location_destination = $query->result_array();
+
+                $sql = "SELECT * FROM `app_notes` WHERE entity_id = {$entity_id}";
+                $query = $this->db->query($sql);
+                $from_app_notes = $query->result_array();
+
+                $sql = "SELECT * FROM `app_vehicles` WHERE entity_id = {$entity_id}";
+                $query = $this->db->query($sql);
+                $from_app_vehicles = $query->result_array();
+
+                $notes_data = array();
+                foreach($from_app_notes as $notes){
+                    $notes_data[] = $notes;           
+                }
+
+                $vehicles_data = array();
+                foreach($from_app_vehicles as $vehicles){
+                    $vehicles_data[] = $vehicles;           
+                }
+
+                $order_details['order_data'] = $from_app_order_header[0];
+                $order_details['shipper_data'] = $from_app_shippers[0];
+                $order_details['origin_data'] = $from_app_locations_origin[0];
+                $order_details['destination_data'] = $from_app_location_destination[0];
+                $order_details['notes_data'] = $notes_data;
+                $order_details['vehicles_data'] = $vehicles_data;
+            }
+        } else {
+            $order_details['error'] = Response::NON_INTEGER_VALUE;
+        }
+        return $order_details;
+    }
+    
+    /**
+     * Function to return all record count on the basis of some wheres
+     * 
+     * @param integer $account_id
+     * @param integer $status
+     * @return integer
+     */
+    public function get_orders_count($account_id, $status){
+        $sql = "SELECT count(*) as `all_orders` FROM `app_order_header`"
+        . " WHERE `account_id` = {$account_id} AND `type` = '" . self::ENTITY_TYPE . "' AND  `status` = {$status} ";
+        
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
+    /**
+     * Function used to pull the order listings on the basis of account id and
+     * passed status from app_order_header
+     * 
+     * @param int $userId account id of a shipper
+     * @param int $status Status of an order
+     * @author Chetu Inc.
+     * @return Array Order listings
+     */
+    public function getOrderList($userId, $status,$from,$to) {
+
+        $data = array(
+            'account_id' => $userId,
+            'status' => $status,
+            'type' => self::ENTITY_TYPE
+        );
+
+        $fields = " `customer_balance_paid_by` as `payment_information`, `distance`,`total_tariff`,`total_carrier_pay`,`total_deposite`,`status`,`entityid`,`number`,`prefix`,(`NotesCount1`+`NotesCount2`+`NotesCount3`) as `notesCount`,`balance_paid_by`,`esigned`,`vehicleid`,`TotalVehicle`,`Vehicleyear`,`Vehiclemake`,`Vehiclemodel`,`Vehicletype`,`Origincity`,`Originstate`,`Originzip`,`Destinationcity`,`Destinationstate`,`Destinationzip`,`created` ,`avail_pickup_date`,`posted`,`archived`,`load_date`,`load_date_type`,`delivery_date`,`delivery_date_type`,`actual_pickup_date`,`hold_date` ";
+        $query = "SELECT " . $fields . " FROM `app_order_header` WHERE `account_id`= '" . $userId . "' AND `type` = '" . self::ENTITY_TYPE . "' AND `status` = '" . $status . "'  LIMIT {$from}, {$to} ";
+        $query = $this->db->query($query);
+        $result = $query->result_array();
+
+        for ($i = 0; $i < count($result); $i++) {
+            $result[$i]['pickup'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+            $result[$i]['delivery'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+
+            if ($result[$i]['status'] == 4 || $result[$i]['status'] == 1) {
+                if (strtotime($result[$i]['avail_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "1st avil",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['avail_pickup_date']))
+                    );
+                }
+                if (strtotime($result[$i]['posted']) > 0) {
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "Posted",
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['posted']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 3) {
+                if (strtotime($result[$i]['avail_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "1st avail",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['avail_pickup_date']))
+                    );
+                }
+                if ($result[$i]['archived'] != "") {
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "Cancelled",
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['archived']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 7 || $result[$i]['status'] == 9) {
+                if (strtotime($result[$i]['load_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['load_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['load_date_type']] : "";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                }
+
+                if (strtotime($result[$i]['delivery_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['delivery_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['delivery_date_type']] : "";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 5 || $result[$i]['status'] == 6) {
+                if (strtotime($result[$i]['load_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['load_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['load_date_type']] : "";
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "ETA Pickup " . $abbr,
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['load_date']))
+                    );
+                }
+
+                if (strtotime($result[$i]['delivery_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['delivery_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['delivery_date_type']] : "";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "ETA Delivery " . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 8) {
+                if (strtotime($result[$i]['actual_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "Pickup ",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['actual_pickup_date']))
+                    );
+                }
+
+                if (strtotime($result[$i]['delivery_date']) == 0) {
+                    $abbr = "N/A";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "" . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                } else {
+                    $abbr = $result[$i]['delivery_date_type'] > 0 ? self::DATE_TYPE[(int) $result[$i]['delivery_date_type']] : "";
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "" . $abbr,
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['delivery_date']))
+                    );
+                }
+            } elseif ($result[$i]['status'] == 2) {
+                if (strtotime($result[$i]['avail_pickup_date']) > 0) {
+                    $result[$i]['pickup'] = array(
+                        'pickupStatus' => "1st avail ",
+                        'pickupDate' => date("m/d/y", strtotime($result[$i]['avail_pickup_date']))
+                    );
+                }
+
+                if ($result[$i]['hold_date'] != "") {
+                    $result[$i]['delivery'] = array(
+                        'deliveryStatus' => "Hold ",
+                        'deliveryDate' => date("m/d/y", strtotime($result[$i]['hold_date']))
+                    );
+                }
+            } else {
+                $result[$i]['pickup'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+                $result[$i]['delivery'] = array('deliveryStatus' => 'N/A', 'deliveryDate' => 'N/A');
+            }            
+                       
+            $amountToCompany = $this->payments->getFilteredPaymentsTotals( $result[$i]['entityid'], Payments::SHIPPER, Payments::COMPANY );
+            $amountFromCompany = $this->payments->getFilteredPaymentsTotals( $result[$i]['entityid'], Payments::COMPANY, Payments::CARRIER );
+            
+            $depositeColor = $this->checkDepositColor($amountToCompany,$result[$i]['total_deposite'],$result[$i]['balance_paid_by']);
+            $tariffColor = $this->checkTariffColor($amountToCompany,$result[$i]['total_tariff'],$result[$i]['balance_paid_by']);
+            $carrierPayColor = $this->checkCarrierPayColor($amountFromCompany,$result[$i]['total_carrier_pay'],$result[$i]['balance_paid_by']);
+                        
+            $result[$i]['paymentInformation']['total_tariff'] = array('color'=>$tariffColor, 'amount'=>$result[$i]['total_tariff']);
+            $result[$i]['paymentInformation']['carrier_pay'] = array('color'=>$carrierPayColor, 'amount'=>$result[$i]['total_carrier_pay']);
+            $result[$i]['paymentInformation']['deposite'] = array('color'=>$depositeColor, 'amount'=>$result[$i]['total_deposite']);            
+            
+        }
+        return $result;
+    }    
+
+    /**
+     * Function to fetch the vehicle information on the basis of entity id from
+     * vehicle table
+     * 
+     * @author Chetu Inc.
+     * @param int $entityid
+     * @return array vehicle information array
+     */
+    public function getVehicles($entityid) {
+        $query = "SELECT * FROM `" . self::VEHILCE_TABLE . "` WHERE `entity_id` = '" . $entityid . "' ";
+        $query = $this->db->query($query);
+        return $query->result_array();
+    }
+
+    /**
+     * Function to check deposit amount color
+     * 
+     * @author Chetu Inc.
+     * @param float $amount amount paid
+     * @param float $deposite actual amount to be paid
+     * @return string $color amount color
+     */
+    private function checkDepositColor($amount,$deposite,$balancePaidBy){        
+        
+        if(in_array($balancePaidBy,self::BALANCE_PAID_BY['COD_COP'])||in_array($balancePaidBy,self::BALANCE_PAID_BY['BILLING'])){
+            if( ( $amount < $deposite) ) {
+                return Payments::AMOUNT_COLOR[0];
+            }
+            if( ( $amount > $deposite ) || ( $amount == $deposite ) ){            
+                return Payments::AMOUNT_COLOR[1];
+            }
+        }
+        
+        if( in_array( $balancePaidBy , self::BALANCE_PAID_BY['INVOICE'] ) ){
+            return Payments::AMOUNT_COLOR[0];
+        }
+    }
+    
+    /**
+     * Function to check tariff amount color
+     * 
+     * @author Chetu Inc.
+     * @param float $amount amount paid
+     * @param float $tariff actual amount to be paid
+     * @return string $color amount color
+     */
+    private function checkTariffColor($amount,$tariff,$balancePaidBy){        
+        
+        if(in_array($balancePaidBy , self::BALANCE_PAID_BY['COD_COP'])){            
+            return Payments::AMOUNT_COLOR[2];
+        }
+        
+        if(in_array($balancePaidBy,self::BALANCE_PAID_BY['BILLING'])){            
+            if( ( $amount < $tariff) ) {
+                return Payments::AMOUNT_COLOR[0];
+            }
+            if( ( $amount > $tariff ) || ( $amount == $tariff ) ){
+                return Payments::AMOUNT_COLOR[1];
+            }
+        }
+        
+        if( in_array( $balancePaidBy , self::BALANCE_PAID_BY['INVOICE'] ) ){            
+            return Payments::AMOUNT_COLOR[2];
+        }
+    }
+    
+    /**
+     * Function to check tariff amount color
+     * 
+     * @author Chetu Inc.
+     * @param float $amount amount paid
+     * @param float $carrierPay actual amount to be paid
+     * @return string $color amount color
+     */
+    private function checkCarrierPayColor($amount,$carrierPay,$balancePaidBy){        
+        
+        if(in_array($balancePaidBy , self::BALANCE_PAID_BY['COD_COP'])){            
+            return Payments::AMOUNT_COLOR[2];
+        }
+        
+        if(in_array($balancePaidBy,self::BALANCE_PAID_BY['BILLING'])){            
+            if( ( $amount < $carrierPay) ) {
+                return Payments::AMOUNT_COLOR[0];
+            }
+            if( ( $amount > $carrierPay ) || ( $amount == $carrierPay ) ){
+                return Payments::AMOUNT_COLOR[1];
+            }
+        }
+        
+        if( in_array( $balancePaidBy , self::BALANCE_PAID_BY['INVOICE'] ) ){            
+            return Payments::AMOUNT_COLOR[2];
+        }
+    }
+    
+}

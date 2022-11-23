@@ -1,0 +1,58 @@
+@charset "utf-8";
+#paper {
+    border: 1px solid #CCCCCC;
+    cursor: default;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+#sign-result {
+    display: none;
+    border: 1px solid #CCCCCC;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+#sign-result img{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: 0;
+}
+
+.sign-controls button {
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#sign_write_controls {
+    height: 35px;
+}
+
+#signature_tool .type_selector label {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.loading_bar {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background: #FFFFFF url(../images/ajax-loader.gif) no-repeat 50% 50%;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}

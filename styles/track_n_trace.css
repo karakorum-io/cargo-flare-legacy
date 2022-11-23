@@ -1,0 +1,98 @@
+/* 
+    Created On : 10052018
+    Author: Chetu Inc.
+*/
+.add-location-form-div
+{
+    margin-top:10px;
+    height: auto;
+    padding:20px 10px 30px 10px;
+    border-radius:5px;
+    border: 1px solid #ccc;
+}
+
+.notes-div
+{
+    margin-top:10px;
+    min-height:100px;
+    height:500px;
+}
+
+#notes-list-div
+{
+    overflow:auto;
+}
+
+#location-form-table td
+{
+    min-width:80px;
+    text-align: right;
+}
+
+#location_suggestion_overlay
+{
+    width:100%;
+    height:100%;
+    background: #f4f4f4;
+    opacity: 0.7;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index:999999;
+}
+
+#location_suggestion
+{
+    width: 347px;
+    padding: 21px;
+    height: 200px;
+    margin: 200px 37%;
+    background: #000;
+    opacity: 0.9;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999999;
+}
+
+#map-div
+{
+    margin-top:40px;
+    width:100%;
+    height:400px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    background:#fff;
+}
+
+#map-div center h3
+{
+    margin-top: 12%;
+}
+
+#order-information-div
+{
+    margin-top:20px;
+    margin-bottom: 5px;
+}
+
+.left-div
+{
+    float:left;
+    width: 30%;
+    height: 270px;
+    margin-right: 18px;
+}
+
+.middle-div{
+    float:left;
+    width: 33.33%;
+    height: 270px;
+    margin-right: 18px;
+}
+
+.right-div{
+    float:left;
+    width: 33.33%;
+    height: 270px;
+}

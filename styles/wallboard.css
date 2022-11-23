@@ -1,0 +1,109 @@
+/*
+To manage design in Wallboard section in web application
+*/
+#wallboard-fields-table, #wallboard-agents-table{
+    border: 1px solid #ccc;    
+    margin-bottom:20px;
+    padding: 10px;
+    padding-top:50px;
+    min-height: 302px;
+}
+
+#wallboard-layout-table{
+    width:100%;
+}
+
+#wallboard-layout-table td{
+    padding-left:20px;
+    vertical-align: top;
+}
+.connectedSortable { 
+    list-style-type: none; 
+    margin: 0;
+    padding: 0 0 2.5em; 
+    float: left; 
+    margin-right: 10px;
+    /*
+    Added adjustments
+    */
+    height:200px;
+    width:250px;
+    overflow-y: scroll;
+}
+.connectedSortable li {
+    font-size: 1.2em;
+    margin: 0 5px 5px;
+    padding: 5px;
+    width: 92%;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #f9f9f9;
+    color: #666;
+    font-weight: normal;
+}
+
+.ui-state-default:hover{
+    background: #D4E8FA;
+    color:#999;
+    font-weight: bold;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background: #FBF9EE;
+    border: 1px solid #FCEFA1;
+    color: #363636;
+}
+
+.ui-state-highlight:hover {
+    background: #CFF7CE;
+    color:#999;
+    font-weight: bold;
+}
+
+#hash-button{
+    color:#fff;
+    border: none;
+    padding:4px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 3px;
+}
+
+#detail-table{
+    margin: 0 auto;
+    width:100%;
+}
+
+#detail-table td{
+    border:1px solid #ccc;
+}
+
+#wallboard-title{
+    margin-top:5%;
+}
+.h4{
+    margin: 5px 0;
+    padding:0 0 0 22px;
+}
+#addedAgents{
+    max-height: 200px;
+    height: auto;
+    overflow-y: auto;
+}
+#wallboard-fields-table{
+    padding-top:  101px;
+     padding-bottom:  101px;
+}
+
+.export_button {
+    width: 100px;
+    height: 23px;
+    background: url(../images/form/button-bg.gif);
+    color: #fff;
+    border: 0;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-weight: normal;
+	float:right;
+}

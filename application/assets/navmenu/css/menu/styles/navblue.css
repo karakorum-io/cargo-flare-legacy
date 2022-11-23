@@ -1,0 +1,243 @@
+.navblue {
+	height:32px;
+	border:0px solid #236D9B;
+	font-family:Arial, Helvetica, sans-serif;
+	
+	background-color:#155ea2;
+	background-image:-webkit-linear-gradient(top, #5CAAD3, #236D9B);
+	background-image:-moz-linear-gradient(top, #5CAAD3, #236D9B);
+	background-image:-o-linear-gradient(top, #5CAAD3, #236D9B);
+	background-image:-ms-linear-gradient(top, #5CAAD3, #236D9B);
+	background-image:linear-gradient(top, #5CAAD3, #236D9B);
+	
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+
+
+}
+
+.navblue a {text-decoration:none;}
+
+.navblue > li > a {
+	color:#fff;
+	font-weight:bold;
+	font-size:12px;
+	line-height:16px;
+	text-shadow:0 -1px #09223a;
+	padding:8px 18px 8px;
+}
+.navblue > li:hover > a {
+	background-color:#1992EE; /*5EAB23;*/
+	background-image:-webkit-linear-gradient(top, #1672B8, #1992EE);
+	background-image:-moz-linear-gradient(top, #1672B8, #1992EE);
+	background-image:-o-linear-gradient(top, #1672B8, #1992EE);
+	background-image:-ms-linear-gradient(top, #1672B8, #1992EE);
+	background-image:linear-gradient(top, #1672B8, #1992EE);
+	
+	-webkit-box-shadow:inset 0 3px #1a63a8, inset 1px 0 #4d8cc6;
+	-moz-box-shadow:inset 0 3px #1a63a8, inset 1px 0 #4d8cc6;
+	box-shadow:inset 0 0px #1a63a8, inset 1px 0 #4d8cc6;
+	
+	border-left:none;
+	padding-left:18px;
+	border-radius:3px;
+}
+
+.navblue > li {border-right:0px solid #0d3f72;border-right:0px solid rgba(0, 0, 0, .33);}
+.navblue > li > a {border-left:0px solid #4c8bcb;border-left:0px solid rgba(255, 255, 255, .20);}
+.navblue > li.floatr {
+	border-right:none;
+	border-left:0px solid #0d3f72;
+	border-left:0px solid rgba(0, 0, 0, .33);
+}
+
+.navblue > li > a img, .navblue li > ul > li > a img {
+	border:0;
+	margin-right:5px;
+}
+
+/* notification bubbles ------------------ */
+
+.navblue > li > a .navbubble, .navblue li > a .navbubble-alt {
+	font-size:11px;
+	line-height:11px;
+	padding:1px 4px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	margin-left:7px;
+	position:relative;
+	top:-1px;
+}
+.navblue > li > a .navbubble {
+	color:#fff;
+	background-color:#df0a0a;
+	text-shadow:0 1px #9d0707;
+	
+	-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4982b6;
+	-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4982b6;
+	box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4982b6;
+}
+.navblue > li > a .navbubble-alt {
+	color:#fff;
+	background-color:#043d71;
+	text-shadow:0 1px #032b4f;
+	
+	-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4d85b8;
+	-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4d85b8;
+	box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4d85b8;
+}
+.navblue > li:hover > a .navbubble {
+	text-shadow:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+.navblue ul > li .navbubble {
+	font-size:11px;
+	line-height:12px;
+	padding:1px 4px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	position:absolute;
+	right:6px;
+	top:7px;
+	color:#fff;
+	background-color:#043d71;
+	text-shadow:0 1px #242424;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4d85b8;
+	-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4d85b8;
+	box-shadow:inset 0 1px 1px rgba(0, 0, 0, .4), 0 1px #4d85b8;
+}
+
+.navblue > li > a .navbubble-top {
+	position:absolute;
+	font-size:11px;
+	line-height:14px;
+	color:#fff;
+	padding:0 3px;
+	right:4px;
+	top:-8px;
+	text-shadow:none;
+	border:1px solid #a00000;
+	
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	
+	background-color: #df0a0a;
+	background-image: -webkit-linear-gradient(top, #f26870, #ec0e23);
+	background-image: -moz-linear-gradient(top, #f26870, #ec0e23);
+	background-image: -o-linear-gradient(top, #f26870, #ec0e23);
+	background-image: -ms-linear-gradient(top, #f26870, #ec0e23);
+	background-image: linear-gradient(top, #f26870, #ec0e23);
+	
+	-webkit-box-shadow:inset 0 1px #ffa7a7;
+	-moz-box-shadow:inset 0 1px #ffa7a7;
+	box-shadow:inset 0 1px #ffa7a7;
+}
+
+/* sub menu ------------------------------ */
+
+.navblue ul {
+	background-color:#236D9B;
+	border:1px solid #06345e;
+	border-top:none;
+	left:-1px;
+	-webkit-box-shadow:0 2px #ddd, inset 1px 0 #4d8cc6;
+	-moz-box-shadow:0 2px #ddd, inset 1px 0 #4d8cc6;
+	box-shadow:0 0px #ddd, inset 1px 0 #4d8cc6;
+}
+.navblue > li.floatr > ul {right:1px;left:auto;}
+.navblue > li.floatr > ul ul {left:-127px;}
+.navblue ul a {
+	color:#fff;
+	font-weight:bold;
+	font-size:12px;
+	line-height:18px;
+	padding:5px 10px;
+	border-top:1px solid #165691;
+	-webkit-box-shadow:inset 0 1px #447fb7;
+	-moz-box-shadow:inset 0 1px #447fb7;
+	box-shadow:inset 0 1px #447fb7;
+	text-shadow:0 -1px #0d3f72;
+}
+.navblue ul a:hover {
+	background-color:#1992EE; /*5EAB23*/
+	-webkit-box-shadow:inset 1px 1px #447fb7;
+	-moz-box-shadow:inset 1px 1px #447fb7;
+	box-shadow:inset 0px 0px #447fb7;
+}
+.navblue ul ul li:first-child a {border-top-color:#06345e;}
+
+/* mega menu ----------------------------- */
+
+.navblue li > div {
+	background-color:#216fb8;
+	border:1px solid #06345e;
+	border-top:none;
+	left:-1px;
+	-webkit-box-shadow:0 2px #ddd, inset 1px 0 #4d8cc6;
+	-moz-box-shadow:0 2px #ddd, inset 1px 0 #4d8cc6;
+	box-shadow:0 2px #ddd, inset 1px 0 #4d8cc6;
+	padding:4px;
+}
+.navblue > li.floatr > div {right:-1px;left:auto;}
+.navblue h4, .navblue h5 {margin:0;padding:0;}
+.navblue h4 {
+	font-size:15px;
+	color:#b3cbe2;
+	font-weight:normal;
+	margin:10px 10px 5px;
+	padding-bottom:10px;
+	border-bottom:1px solid #508ac1;
+}
+.navblue h5 {
+	font-size:14px;
+	color:#fff;
+	font-weight:bold;
+	margin:10px 10px 0;
+	text-shadow:0 -1px #0d3f72;
+}
+.navblue ol {
+	list-style:none;
+	margin:7px 10px;
+	padding:0;
+}
+
+.navblue ol a {
+	color:#b8d3ec;
+	font-size:12px;
+	padding:3px 0;
+}
+.navblue ol a:hover {
+	color:#fff;
+}
+.navblue p {
+	color:#fff;
+	font-size:12px;
+	line-height:18px;
+	margin:9px 10px;
+	padding:0;
+}
+.navblue p a {
+	color:#b8d3ec;
+	text-decoration:underline;
+}
+.navblue p a:hover {
+	color:#fff;
+}
+
+/* This controls the bubble moving effect */
+.navblue > li > a:hover .navbubble-top {
+	-webkit-transform:translate3d(0, -3px, 0);
+	-moz-transform:translateY(-3px);
+	-o-transform:translateY(-3px);
+	-ms-transform:translateY(-3px);
+	transform:translateY(-3px);
+	
+}
+

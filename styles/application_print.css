@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	font-family: Arial;
+	font-size: 10px;
+	color: #444;
+}
+
+td {
+	vertical-align: top;
+	font-size: 10px;
+}
+
+td.nowrap {
+	white-space: nowrap;
+}
+
+th {
+	background-color: #EEE;
+	font-weight: bold;
+	text-align: center;
+	font-size: 11px;
+}
+
+.dispatch_table td, .dispatch_table th {
+    padding: 3px;
+}
+
+.dispatch_table th {
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    color: #222222;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+
+.dispatch_table td.group {
+    padding: 0px;
+    vertical-align: top;
+}
+
+.vehicles-table {
+    background-color: #666666;
+}
+
+.dispatch_table .vehicles-table th {
+    background-color: #EEEEEE;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 20px;
+}
+
+.dispatch_table .vehicles-table td {
+    background-color: #FFFFFF;
+    text-align: left;
+    padding: 3px 20px;
+}
+
+.fake-th {
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    color: #222222;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #CCCCCC;
+    text-align: center;
+    padding: 3px;
+}
+
+.fake-td {
+    padding: 3px;
+}

@@ -1,0 +1,1 @@
+{"username": "<?php echo $this->data['0']['username'];?>","items": [<?php echo $this->data['0']['items'];?>]}

@@ -1,0 +1,563 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	font-family: Arial;
+	font-size: 10px;
+	color: #444;
+}
+
+td {
+	vertical-align: top;
+	font-size: 10px;
+}
+
+td.nowrap {
+	white-space: nowrap;
+}
+
+th {
+	background-color: #EEE;
+	font-weight: bold;
+	text-align: center;
+	font-size: 11px;
+}
+
+.dispatch_table td, .dispatch_table th {
+    padding: 0px;
+}
+
+.dispatch_table th {
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    color: #222222;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+
+.dispatch_table td.group {
+    padding: 0px;
+    vertical-align: top;
+}
+
+.vehicles-table {
+    background-color: #2C87B9;
+	
+}
+
+.dispatch_table .vehicles-table th {
+    background-color: #EEEEEE;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 23px;
+}
+
+.dispatch_table .vehicles-table td {
+    background-color: #FFFFFF;
+    text-align: left;
+    padding: 3px 23px;
+	height:58px; font-size:12px;
+	
+}
+
+.fake-th {
+    border-top: 1px solid #1A669E;
+    border-bottom: 1px solid #1A669E;
+    color:#ffffff;
+    font-size:18px; 
+    font-weight:bold;
+    background-color: #2C87B9;
+    text-align: center;
+    padding: 3px;
+
+  
+}
+
+.fake-td {
+    padding: 3px;
+}
+
+
+.table_outer{ 
+   border:1px solid #2C87B9;
+}
+.table_inner { 
+   border:1px solid #2C87B9;
+  padding:4px !important;
+  
+  
+}
+
+.table_inner_less_padding { 
+   border:1px solid #2C87B9;
+   padding:4px !important;
+   
+}
+
+.table_inner_less_padding td{ 
+   border-bottom:1px solid #2C87B9;
+   height:31px;
+}
+
+
+
+.table_inner_less_padding .inner td{ 
+   border-bottom:none;
+  
+}
+
+
+.dis_heading{ 
+  color:#2C87B9; 
+  font-size:18px; 
+  font-weight:bold;
+   
+}
+.dis_heading_small{ 
+  color:#2C87B9; 
+  font-size:13px; 
+  font-weight:bold;
+   
+}
+
+.dis_heading_vsmall{ 
+  color:#2C87B9; 
+  font-size:11px; 
+  font-weight:bold;
+   
+}
+
+.dis_column_text_small{ 
+  font-size:13px; 
+  font-weight:bold;
+  padding-left:2px;
+}
+.dis_column_text{ 
+  font-size:11px; 
+  
+  padding-left:5px;
+}
+.dis_large_red{ 
+  font-size:20px; 
+  font-weight:bold;
+  padding-left:5px;
+  color:#C00;
+}
+
+.dis_large_red_small{ 
+  font-size:16px; 
+  font-weight:bold;
+  padding-left:5px;
+  color:#C00;
+}
+
+.dis_large_black{ 
+  font-size:20px; 
+  font-weight:bold;
+  padding-left:5px;
+  color:#ffffff;
+}
+
+.dispatch_table td, .dispatch_table th {
+    padding: 0;
+}
+
+.dis_heading_next{ 
+  color:#2C87B9; 
+  font-size:16px; 
+  font-weight:bold;
+   
+}
+.dis_heading_small_next{ 
+  color:#2C87B9; 
+  font-size:10px; 
+  font-weight:bold;
+   
+}
+
+.dis_heading_vsmall_next{ 
+  color:#2C87B9; 
+  font-size:9px; 
+  font-weight:bold;
+   
+}
+
+.dis_large_red_small_next{ 
+  font-size:11px; 
+  font-weight:bold;
+  padding-left:5px;
+  color:#C00;
+}
+
+.wrapper {
+    width: 860px;
+    margin: auto;
+    padding: 1em 0;
+    /*background: url(@company_logo@) .5em .86em no-repeat;*/
+    margin-top: 0px;
+}
+
+.left {
+    float: left;
+    padding-right: 10px;
+}
+
+.right {
+    float: left;
+}
+
+.underline, .underline_strong {
+    border-bottom: 1px dotted #bbb;
+    font-size: 14px;
+}
+
+.underline_strong {
+    font-weight: bold;
+}
+
+.label, .label_strong {
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.label_strong {
+    color: #000;
+}
+
+.form-header {
+    font-weight: bold;
+    font-size: 12;
+    color: #891;
+    text-align: left;
+}
+
+.form-header-white{
+    font-weight: bold;
+    font-size: 14;
+    color: #ffffff;
+    text-align: left;
+}
+
+dl.form-list {
+    list-style: none;
+    margin: 0;
+    padding: .5em 0;
+}
+
+dl.form-list dt {
+    display: block;
+    clear: both;
+    margin: 1em 0;
+    padding: .4em .8em;
+    font-weight: bold;
+    font-size: 120%;
+    color: #fff;
+    border-radius: 5px;
+    text-shadow: 0 -1px #27a;
+    background: #38b;
+    box-shadow: inset 1px 1px 2px #5ad, inset -1px -1px 2px #27a, inset .1em .33em 1em -.5em #49c, inset -.2em -.4em 2em -1em #27a;
+}
+
+dl.form-list dd {
+    display: block;
+    margin: 0;
+    padding: 0 0 2em;
+}
+
+dl.form-list dd:before, dl.form-list dd:after {
+    content: "";
+    display: table;
+}
+
+dl.form-list dd:after {
+    clear: both;
+}
+
+dl.form-list dd {
+    zoom: 1;
+}
+
+.form-fields {
+    width: 100%;
+}
+
+.form-fields td {
+    
+}
+
+#invoice-params {
+    margin: 1em auto;
+    border: none;
+    border-collapse: collapse;
+	width:100%
+}
+
+#invoice-params th, #invoice-params td {
+    border: 1px solid #ccc;
+    padding: .33em 1.4em;
+}
+
+#invoice-params th {
+    font-size: 12px;
+    color: #000;
+    text-shadow: 0 1px #fff;
+    box-shadow: inset 0 0 1em #ddd;
+    background: #eee;
+}
+
+#invoice-params td {
+    font-size: 14px;
+    box-shadow: inset 0 0 1em #eee;
+}
+
+.print-section {
+    
+
+}
+
+.vehicle-table {
+    width: 100%;
+    margin: 1em auto;
+    border: none;
+    border-collapse: collapse;
+}
+
+.vehicle-table th, .vehicle-table td {
+    border: 1px solid #ccc;
+    padding: .33em 1.4em;
+}
+
+.vehicle-table th {
+    font-size: 12px;
+    color: #000;
+    text-shadow: 0 1px #fff;
+    box-shadow: inset 0 0 1em #ddd;
+    background: #eee;
+}
+
+.vehicle-table td {
+    font-size: 12px;
+    box-shadow: inset 0 0 1em #eee;
+}
+
+.print_section_header2 {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 120%;
+    color: #891;
+
+}
+
+.invoice_header {
+    text-align: center;
+    white-space: nowrap;
+    padding: 1em 0;
+   /* padding-left: 400px;*/
+}
+
+.invoice_header .title, .invoice_header .order {
+    white-space: nowrap;
+}
+
+.company_address_info {
+    width: 420px;
+    float: left;
+    vertical-align: top;
+    padding-bottom: 0px;
+}
+
+.normal-text {
+    font-size: 12;
+    font-weight: normal;
+    vertical-align: top;
+	color:#36F;
+	 line-height: 1.5;
+}
+.normal-text-small {
+    font-size: 12;
+    font-weight: normal;
+    vertical-align: top;
+	color:#36F;
+	 line-height: 1.5;
+}
+
+.normal-text-black {
+    font-size: 14;
+    font-weight: normal;
+    vertical-align: top;
+	color:#000000;
+	 line-height: 1.5;
+}
+.normal-text-red {
+    font-size: 14;
+    font-weight: normal;
+    vertical-align: top;
+	color:#F30;
+}
+
+.normal-text-bold {
+    font-size: 14;
+    font-weight: bold;
+    vertical-align: top;
+	color:#36F;
+}
+
+.normal-text-bold-black{
+    font-size: 14;
+    font-weight: bold;
+    vertical-align: top;
+	color:#000000;
+}
+
+.sales_contact_info {
+    width: 260px;
+    padding-bottom: 0px;
+}
+
+.opening_info {
+    padding: 1em;
+}
+
+.customer_info {
+    width: 401px;
+    float: left;
+    vertical-align: top;
+}
+
+.customer_info td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.customer_info .right {
+    padding-left: 10px;
+}
+
+.customer_info .left .underline {
+    width: 120px
+}
+
+.customer_info .right .underline {
+    width: 130px;
+}
+
+.price_and_ship {
+    width: 290px;
+    float: right;
+    vertical-align: top;
+}
+
+.price_and_ship td {
+    width: 115px;
+    vertical-align: middle;
+}
+
+.price_and_ship .right .underline {
+    width: 90px;
+}
+
+.payments {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.transit_directives td {
+    vertical-align: middle;
+}
+
+.transit_directives .right {
+    padding-left: 50px;
+}
+
+.transit_directives .left .underline, .transit_directives .right .underline {
+    width: 200px;
+}
+
+.vehicle_info table {
+    width: 600px;
+}
+
+.vehicle_info th {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-right: 1px solid #000;
+}
+
+.vehicle_info td {
+    border-right: 1px solid #000;
+}
+
+.vehicle {
+    float: left;
+    border-right: 1px solid #000;
+}
+
+.vehicle_header {
+    text-decoration: underline;
+    padding-top: 5px;
+}
+
+.vehicle_odd {
+    padding-left: 2px;
+    background-color: #fff;
+    border-bottom: 1px dashed #333;
+}
+
+.vehicle_even {
+    padding-left: 2px;
+    background-color: #fff;
+    border-bottom: 1px dashed #333;
+}
+
+#year_make_model {
+    width: 150px;
+}
+
+#runs {
+    width: 38px;
+}
+
+#type {
+    width: 110px;
+}
+
+#color {
+    width: 75px;
+}
+
+#tariff {
+    width: 75px;
+}
+
+.deposit .left .underline {
+    width: 230px;
+}
+
+.deposit .right .underline {
+    width: 200px;
+}
+
+.agree .underline {
+    width: 200px;
+}
+
+.agree .underline_long {
+    width: 350px;
+    border-bottom: 1px solid #000000;
+}	
+div .titles {
+    background-color: #d1dfef;
+    border-bottom: 1px solid #666666;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+     padding: 5px;
+    text-align: center;
+	color:#FFF;
+	margin:20px;
+}
+

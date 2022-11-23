@@ -1,0 +1,66 @@
+* {box-sizing: border-box;}
+.wrapper{width:100%;margin:0 auto;}
+.container {margin: 0 auto;max-width: 1170px;width: 100%;float:none;}
+.top-head-sec{display: inline-block; margin: 10px 0;padding-top: 10px;}
+.review-head-sec{display: inline-block;width:100%;margin: auto;padding: 10px 0;}
+.add-sec-strt { display: inline-block; width: 100%;}
+.add-city-main-sec {display: inline-block; width: 100%;}
+.order-info1{display: inline-block; margin: 6px 12px 6px 0;width: 48%;}
+.add-dot-sec{width:4%;align:center;line-height:15px;}
+.inner-sec-add-text {display: inline-block; width: 32%;}
+.frm-group-sec .add-right-side {display: inline-block;padding: 5px;}
+.custm-rate-sec {display: inline-block;width: 100%; margin: 10px;}
+.cust-btm-sec {display: inline-block;vertical-align: middle;width: 76%;}
+.cust-rate-inner { display: inline-block; width: 17%; padding: 10px;}
+.cust-btm-sec textarea {margin-left: 2%;}
+.searchform-button { float: right;height: 35px; margin:1% 2.5%;width: 100%;max-width: 80px;}
+.vehcl-sec-text{width:97%;overflow-x:auto; }
+.frm-group-sec {display: inline-block;width: 100%;}
+.add-inner-sec {display: inline-block;width: 100%;}
+.table-btm-scroll{width: 100%;overflow-x:auto; }
+.custm-feed-order {display: inline-block; width: 49%;}
+
+@media only screen and (max-width: 1199px) {
+.main-top-sec-strt {padding: 15px;width: 95%;margin: auto;}
+.apl_centering_home {padding:0;}
+.top-head-sec {display: inline-block; margin: 10px 0;padding: 10px;}
+.add-city-main-sec {display: inline-block;width: 100%;}
+.pick-sec-text { display: inline-block;width: 100%;}
+.main-sec-text { display: inline-block;width: 100%;}
+.order-info.order-info1{  margin: 6px 0;width: 97%;}
+
+ .order-info1 { width: 96%;}
+    
+}
+@media only screen and (max-width: 991px) {
+.main-top-sec-strt {padding: 15px;width: 100%;margin: auto;}
+.apl_centering_home {padding:0;}
+.top-head-sec {display: inline-block; margin: 10px 0;padding: 10px;}
+.add-city-main-sec {display: inline-block;width: 100%;}
+.pick-sec-text { display: inline-block;width: 100%;}
+.main-sec-text { display: inline-block;width: 100%;}
+.order-info.order-info1{  margin: 6px 0;width: 97%;}
+.vehcl-sec-text{width:97%;overflow-x:auto; }
+.custm-rate-sec {display: inline-block;margin: 10px 0;width: 100%;}    
+.cust-btm-sec {display: inline-block;vertical-align: middle; width: 60%;}
+.cust-rate-inner {width: 27%;}   
+ .order-info1 { width: 96%;}
+    
+}
+
+@media only screen and (max-width: 767px) {
+.main-top-sec-strt {padding: 15px 0 15px 15px;width: 100%;margin: auto;}
+.apl_centering_home {padding:0;}
+.top-head-sec {display: inline-block; margin: 10px 0;padding: 10px;}
+.add-city-main-sec {display: inline-block;width: 100%;}
+.pick-sec-text { display: inline-block;width: 100%;}
+.main-sec-text { display: inline-block;width: 100%;}
+.order-info.order-info1{ width:96%;}
+.vehcl-sec-text{width:96%;overflow-x:auto; }
+.custm-rate-sec {display: inline-block;margin: 10px 0;width: 100%;}    
+.cust-btm-sec {display: inline-block;vertical-align: middle; width: 60%;}
+.cust-rate-inner {width: 35%;}   
+.top-head-sec { display: inline-block; margin: 10px auto; padding: 10px; text-align: center; width: 100%; }
+.custm-feed-order { display: inline-block; width: 100%;}
+    
+}

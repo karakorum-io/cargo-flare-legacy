@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en">
+<head>
+	<title>Shipping Order Form</title>
+	<style type="text/css">
+		body {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-size: 13px; color: #444; margin: 3px; padding: 0px;
+		}
+		.wrapper {
+			width: 860px;
+			margin: auto;
+			padding: 1em 0;
+			background: url(@company_logo@) .5em .86em no-repeat;
+		}
+		.left { float: left; padding-right: 10px; }
+		.right { float: left; }
+		.underline, .underline_strong { border-bottom: 1px dotted #bbb; font-size: 14px; }
+		.underline_strong { font-weight: bold; }
+		.label, .label_strong { text-align: right; font-size: 12px; font-weight: bold; white-space: nowrap; }
+		.label_strong { color: #000; }
+		.form-header {
+			font-weight: bold;
+			font-size: 220%;
+			color: #891;
+			text-align: center;
+			padding: .5em;
+
+		}
+		dl.form-list {
+			list-style: none;
+			margin: 0;
+			padding: .5em 0;
+		}
+		dl.form-list dt {
+			display: block;
+			clear: both;
+			margin: 1em 0;
+			padding: .4em .8em;
+			font-weight: bold;
+			font-size: 120%;
+			color: #fff;
+			border-radius: 5px;
+			background: #38b;
+		}
+		dl.form-list dd {
+			display: block;
+			margin: 0;
+			padding: 0 0 2em;
+		}
+		dl.form-list dd:before, dl.form-list dd:after { content: ""; display: table; }
+		dl.form-list dd:after { clear: both; }
+		dl.form-list dd { *zoom: 1; }
+		.form-fields {
+			width: 100%;
+		}
+		.form-fields td {
+			padding: .2em 1em;
+		}
+		.print-section {
+			border-radius: 5px;
+			border: 1px solid #e5e7e0;
+
+		}
+		.print_section_header2 {
+			text-align: center;
+			font-weight: bold;
+			font-style: italic;
+			font-size: 120%;
+			color: #891;
+
+		}
+		.form_header { width: 670px; font-weight: bold; font-size: 16px; text-align: center; }
+		.company_address_info { width: 420px; float: left; vertical-align: top; padding-bottom: 0px; }
+		.company_name { font-size: 150%; font-weight: bold; vertical-align: top; }
+		.sales_contact_info { width: 260px; padding-bottom: 0px; }
+		.opening_info { padding: 1em; }
+		.customer_info { width: 401px; float: left; vertical-align: top; }
+		.customer_info td { text-align: left; vertical-align: middle; }
+		.customer_info .right { padding-left: 10px; }
+		.customer_info .left .underline { width: 120px }
+		.customer_info .right .underline { width: 130px; }
+		.price_and_ship { width: 290px; float: right; vertical-align: top; }
+		.price_and_ship td { width: 115px; vertical-align: middle; }
+		.price_and_ship .right .underline { width: 90px; }
+		.payments { padding-top: 0px; padding-bottom: 0px; }
+		.transit_directives td { vertical-align: middle; }
+		.transit_directives .right { padding-left: 50px; }
+		.transit_directives .left .underline, .transit_directives .right .underline { width: 200px; }
+		.vehicle-table { border-collapse: collapse }
+		.vehicle-table td, .vehicle-table th { border: 1px solid #38b; }
+		.vehicle-table td { background-color: #fff; text-align: left; padding: 3px 5px }
+		.vehicle-table th { background-color: #eee; text-align: center; font-weight: bold; padding: 3px 20px }
+		.deposit .left .underline { width: 230px; }
+		.deposit .right .underline { width: 200px; }
+		.agree .underline { width: 200px; }
+		.agree .underline_long { width: 350px; border-bottom: 1px solid #000000; }
+	</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="form-header">Shipping Order Form</div>
+<div class="print-section">
+	<table class="form-fields">
+		<col span="2" width="50%" />
+		<tr valign="top">
+			<td width="50%">
+				<div class="company_address_info">
+					<span class="company_name">@company_name@</span><br />
+					@company_address@<br/>
+					@company_city@, @company_state@ @company_zip@
+				</div>
+			</td>
+			<td width="50%">
+				<table class="form-fields">
+					<tr>
+						<td class="label">Salesperson:</td>
+						<td class="right">@user_name@</td>
+					</tr>
+					<tr>
+						<td valign="top" class="label">Phone:</td>
+						<td class="right">@company_phone_local@</td>
+					</tr>
+					<tr>
+						<td class="label">Fax:</td>
+						<td class="right">@company_phone_fax@</td>
+					</tr>
+					<tr>
+						<td class="label">Email:</td>
+						<td class="right">@user_email@</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="opening_info">
+	<div align="center"><br />
+		<font size="5">Confirmation order ID: <font color="#0000ff"><strong>@entity_number@</strong></font></font>
+		<br />
+	</div>
+	<br />
+	Thank you for the opportunity to serve your automobile, motorcycle, boat or heavy machinery transport needs.
+	Please REVIEW this entire order form to ensure all the information is correct if something is incorrect please print out this form, cross out the error and initial next to the correction.
+	After all corrections have been made, please fax the updated form to our fax  number: @company_phone_fax@ or contact your representative assigned to this order to adjust the order as required by the client.<br />
+	<br />
+	<strong>Special Note: @shipper_comment@</strong>
+	<br />
+</div>
+<dl class="form-list">
+	<dt>1. Shipper Information.</dt>
+	<dd>
+		<table class="form-fields">
+			<tbody>
+			<tr>
+				<td class="label" width="15%">First Name:</td>
+				<td class="underline" width="35%">@shipper_first_name@</td>
+				<td class="label" width="15%">Company:</td>
+				<td class="underline" width="35%">@shipper_company_name@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Last Name:</td>
+				<td class="underline" width="35%">@shipper_last_name@</td>
+				<td class="label" width="15%">Address:</td>
+				<td class="underline" width="35%">@shipper_address@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Phone 1:</td>
+				<td class="underline" width="35%">@shipper_phone@</td>
+				<td class="label" width="15%">Address 2:</td>
+				<td class="underline" width="35%">@shipper_address2@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Phone 2:</td>
+				<td class="underline" width="35%">@shipper_phone2@</td>
+				<td class="label" width="15%">City:</td>
+				<td class="underline" width="35%">@shipper_city@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Cell:</td>
+				<td class="underline" width="35%">@shipper_phone_cell@</td>
+				<td class="label" width="15%">State/Zip:</td>
+				<td class="underline" width="35%"> @shipper_state@ @shipper_zip@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Fax:</td>
+				<td class="underline" width="35%">@shipper_phone_fax@</td>
+				<td class="label" width="15%">Country:</td>
+				<td class="underline" width="35%">@shipper_country@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Email:</td>
+				<td class="underline" width="35%">@shipper_email@</td>
+				<td colspan="2">&#8203;</td>
+			</tr>
+			</tbody>
+		</table>
+	</dd>
+	<dt>2. Pricing and Shipping.</dt>
+	<dd>
+		<table class="form-fields">
+			<tbody>
+			<tr>
+				<td class="label" width="15%">1st Avail Date:</td>
+				<td class="underline" width="35%">@entity_avail_pickup_date@</td>
+				<td class="label" width="15%"><strong>Deposit</strong>:</td>
+				<td class="underline" width="35%"><font color="#ff0000"><strong>@entity_total_deposit@</strong></font></td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Ship Via:</td>
+				<td class="underline" width="35%">@entity_ship_via@</td>
+				<td class="label_strong" width="15%">Carrier Pay:</td>
+				<td class="underline_strong" width="35%">@entity_carrier_pay@</td>
+			</tr>
+			<tr>
+				<td colspan="2">&#8203;</td>
+				<td class="label" width="15%"><strong>Total Tariff:</strong></td>
+				<td class="underline" width="35%"><strong>@entity_total_tariff@</strong></td>
+			</tr>
+			</tbody>
+		</table>
+	</dd>
+	<dt>3. Transit Directives.</dt>
+	<dd>
+		<table class="form-fields">
+			<tr>
+				<td colspan="2" class="print_section_header2">Origin</td>
+				<td colspan="2" class="print_section_header2">Destination</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Name:</td>
+				<td class="underline" width="35%">@origin_contact@</td>
+				<td class="label" width="15%">Name:</td>
+				<td class="underline" width="35%">@destination_contact@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Company:</td>
+				<td class="underline" width="35%">@origin_company@</td>
+				<td class="label" width="15%">Company:</td>
+				<td class="underline" width="35%">@destination_company@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Phone 1:</td>
+				<td class="underline" width="35%">@origin_phone1@</td>
+				<td class="label" width="15%">Phone 1:</td>
+				<td class="underline" width="35%">@destination_phone1@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Phone 2:</td>
+				<td class="underline" width="35%">@origin_phone2@</td>
+				<td class="label" width="15%">Phone 2:</td>
+				<td class="underline" width="35%">@destination_phone2@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Phone 3:</td>
+				<td class="underline" width="35%">@origin_phone3@</td>
+				<td class="label" width="15%">Phone 3:</td>
+				<td class="underline" width="35%">@destination_phone3@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Address:</td>
+				<td class="underline" width="35%">@origin_address1@</td>
+				<td class="label" width="15%">Address:</td>
+				<td class="underline" width="35%">@destination_address1@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Address 2:</td>
+				<td class="underline" width="35%">@origin_address2@</td>
+				<td class="label" width="15%">Address 2:</td>
+				<td class="underline" width="35%">@destination_address2@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">City:</td>
+				<td class="underline" width="35%">@origin_city@</td>
+				<td class="label" width="15%">City:</td>
+				<td class="underline" width="35%">@destination_city@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">State/Zip:</td>
+				<td class="underline" width="35%">@origin_state@ @origin_zip@</td>
+				<td class="label" width="15%">State/Zip:</td>
+				<td class="underline" width="35%">@destination_state@ @destination_zip@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Country:</td>
+				<td class="underline" width="35%">@origin_country@</td>
+				<td class="label" width="15%">Country:</td>
+				<td class="underline" width="35%">@destination_country@</td>
+			</tr>
+		</table>
+	</dd>
+	<dt>4. Vehicle, Motorcycle, Boat or Heavy Equipment.</dt>
+	<dd>
+		@vehicle_table@
+	</dd>
+	<dt>5. Payment Options.</dt>
+	<dd>
+		<table class="form-fields">
+			<tr>
+				<td class="label" width="15%">Circle One:</td>
+				<td class="underline" width="35%">Check, Money Order, Cash, Credit Card</td>
+				<td class="label" width="15%">Deposit:</td>
+				<td class="underline" width="35%">@entity_total_deposit@</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Credit Card Number:</td>
+				<td class="underline" width="35%">&#8203;</td>
+				<td class="label" width="15%">Exp. Date:</td>
+				<td class="underline" width="35%">&#8203;</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Name On Card:</td>
+				<td class="underline" width="35%">&#8303;</td>
+				<td class="label" width="15%">Security Code:</td>
+				<td class="underline" width="35%">&#8303;</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Card Billing Address:</td>
+				<td class="underline" width="35%">&#8203;</td>
+				<td rowspan="2" class="label" width="15%">&#8203;</td>
+				<td rowspan="2" width="35%">
+					This is the last 3 digits on back of Visa/Mastercard or 4 digits above CC# on front of Amex.
+				</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Authorized Signature:</td>
+				<td class="underline" width="35%">&#8203;</td>
+			</tr>
+		</table>
+	</dd>
+	<dt>6. Terms and Conditions</dt>
+	<dd>
+		@company_order_terms@
+	</dd>
+	<dt>7. Agreed &amp; Accepted</dt>
+	<dd>
+		<div style="text-align: center;">
+			<p><em>I have read, and understand, the attached Terms and Conditions and I intend, and agree, to be bound by them.</em></p>
+			@sign_this_form@<br/><br/>
+			<strong>OR</strong>
+			<p><em>Fax: I agree to and authorize of the above vehicle as set forth above and in the attached terms &amp; conditions</em></p>
+		</div>
+	</dd>
+	<dd>
+		<table class="form-fields">
+			<tbody>
+			<tr>
+				<td class="label" width="15%">Signature:</td>
+				<td class="underline" width="35%">&nbsp;</td>
+				<td class="label" width="15%">Date:</td>
+				<td class="underline" width="35%">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="label" width="15%">Print Name:</td>
+				<td class="underline" width="35%">&nbsp;</td>
+				<td colspan="2">&#8203;</td>
+			</tr>
+			</tbody>
+		</table>
+	</dd>
+</dl>
+<br />
+<div style="text-align: center; font-weight: bold">***** Please fax this completed document to @company_phone_fax@ *****</div>
+<br />
+</div>
+<br/>
+</body>
+</html>
